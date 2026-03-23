@@ -166,6 +166,7 @@
         }
     }
     </script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
 <body class="text-brand-text antialiased selection:bg-brand-burgundy selection:text-white bg-white">
@@ -210,27 +211,25 @@
     <main>
         <section class="max-w-7xl mx-auto px-6 pt-12 pb-24 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
             <div class="max-w-xl fade-in">
-                <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-6">Osobní stylistka pro
-                    ženy 40+</p>
+                <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-6">{{ hero.tag }}</p>
                 <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl leading-[1.08] tracking-tight mb-8">
-                    Styl nemá<br>
-                    velikost.<br>
-                    <span class="text-brand-burgundy italic">Ani věkový limit.</span>
+                    {{ hero.title | safe }}
+                    <span class="text-brand-burgundy italic">{{ hero.highlight }}</span>
                 </h1>
                 <p class="text-base md:text-lg text-gray-600 mb-10 leading-relaxed max-w-md">
-                    Pomáhám ženám, které chtějí být zase vidět — bez diet, bez výmluv, bez frustrace.
+                    {{ hero.description }}
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="#kontakt"
                         class="btn-primary bg-brand-burgundy text-white px-8 py-4 text-sm font-medium hover:bg-brand-dark transition-colors rounded-sm text-center">
-                        Chci změnu — napište mi
+                        {{ hero.btn1_text }}
                     </a>
                     <a href="#sluzby"
                         class="border border-gray-300 px-8 py-4 text-sm font-normal hover:border-brand-burgundy hover:text-brand-burgundy transition-all rounded-sm text-center">
-                        Prohlédnout služby
+                        {{ hero.btn2_text }}
                     </a>
                 </div>
-                <p class="text-xs text-gray-400 mt-6">Už desítky žen objevily svůj styl. Teď jste na řadě vy.</p>
+                <p class="text-xs text-gray-400 mt-6">{{ hero.subtext }}</p>
             </div>
             <div class="relative w-full max-w-md ml-auto mt-10 md:mt-0 fade-in">
                 <div
@@ -286,20 +285,13 @@
                         loading="lazy" decoding="async">
                 </div>
                 <div class="max-w-lg fade-in">
-                    <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4">Kdo je za tím
-                        vším?</p>
+                    <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4">{{ about.tag }}</p>
                     <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl leading-tight tracking-tight mb-8">
-                        Jsem Michaela,<br>
-                        vaše osobní<br>
-                        <span class="text-brand-burgundy italic">stylistka</span>
+                        {{ about.title | safe }}
+                        <span class="text-brand-burgundy italic">{{ about.title_highlight }}</span>
                     </h2>
                     <div class="text-base text-gray-600 mb-10 leading-relaxed space-y-4">
-                        <p>Pomáhám ženám, které stojí každé ráno před skříní s pocitem <strong>„nemám co na
-                                sebe"</strong> — přitom mají plný šatník.</p>
-                        <p>Sama nosím velikost 44. Vím, jak těžké je najít oblečení, ve kterém se cítíte skvěle, aniž
-                            byste musely hubnout, omlouvat se nebo nosit „co se na vás vejde".</p>
-                        <p>Věřím, že <strong>styl není o velikosti, ale o sebevědomí</strong>. A to vám pomohu najít.
-                        </p>
+                        {{ about.body | safe }}
                     </div>
                     <div class="grid grid-cols-3 gap-6 md:gap-8 text-center border-t border-gray-200 pt-8">
                         <div>

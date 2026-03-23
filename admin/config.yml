@@ -1,0 +1,30 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "assets/uploads"
+
+collections:
+  - name: "settings"
+    label: "Nastavení Webové stránky"
+    files:
+      - label: "Úvodní sekce (Hero)"
+        name: "hero"
+        file: "_data/hero.json"
+        fields:
+          - {label: "Štítek", name: "tag", widget: "string"}
+          - {label: "Hlavní Nadpis (podpora <br>)", name: "title", widget: "string"}
+          - {label: "Zvýrazněný text (Kurzíva)", name: "highlight", widget: "string"}
+          - {label: "Popis pod nadpisem", name: "description", widget: "text"}
+          - {label: "Tlačítko 1 text", name: "btn1_text", widget: "string"}
+          - {label: "Tlačítko 2 text", name: "btn2_text", widget: "string"}
+          - {label: "Podtext tlačítek", name: "subtext", widget: "string"}
+      - label: "O mně sekce"
+        name: "about"
+        file: "_data/about.json"
+        fields:
+          - {label: "Štítek", name: "tag", widget: "string"}
+          - {label: "Nadpis", name: "title", widget: "string"}
+          - {label: "Zvýrazněný text v nadpisu", name: "title_highlight", widget: "string"}
+          - {label: "Hlavní text", name: "body", widget: "markdown"}
