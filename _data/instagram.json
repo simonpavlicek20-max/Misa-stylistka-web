@@ -1,0 +1,29 @@
+{
+  "tag": "Instagram",
+  "title": "Sledujte mě na Instagramu",
+  "description": "Každý den nová inspirace, outfity a tipy pro ženy 40+",
+  "btn_text": "Sledovat @stylovav50",
+  "btn_link": "https://www.instagram.com/stylovav50/",
+  "items": [
+    {
+      "image": "/assets/ig_thumb_DUjJ-5iiOJQ.jpg",
+      "link": "https://www.instagram.com/p/DUjJ-5iiOJQ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+      "alt": "Instagram příspěvek – ukázka práce a módní inspirace"
+    },
+    {
+      "image": "/assets/ig_thumb_DWJW5lSCGuU.jpg",
+      "link": "https://www.instagram.com/reel/DWJW5lSCGuU/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+      "alt": "Instagram video – tipy na styling pro plnoštíhlé ženy"
+    },
+    {
+      "image": "/assets/ig_thumb_DQz97X9iPH-.jpg",
+      "link": "https://www.instagram.com/p/DQz97X9iPH-/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+      "alt": "Instagram příspěvek – kombinace barev v outfitu"
+    },
+    {
+      "image": "/assets/ig_thumb_DTD9YwxiJCX.jpg",
+      "link": "https://www.instagram.com/p/DTD9YwxiJCX/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+      "alt": "Instagram příspěvek – osobní nákupy a výběr šatníku"
+    }
+  ]
+}

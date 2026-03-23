@@ -235,7 +235,7 @@
                 <div
                     class="absolute -right-4 md:-right-8 -top-4 md:-top-8 w-full h-[105%] bg-brand-burgundy z-0 rounded-sm">
                 </div>
-                <img src="assets/michaela-osobni-stylistka-hero.jpeg" alt="Michaela – osobní stylistka"
+                <img src="{{ hero.image }}" alt="Michaela – osobní stylistka"
                     class="relative z-10 w-full object-cover object-top aspect-[4/5]" id="hero-image"
                     fetchpriority="high" decoding="async">
                 <div class="absolute -bottom-10 right-0 flex gap-6 text-sm font-normal text-gray-500 z-20">
@@ -280,7 +280,7 @@
                     <div
                         class="absolute -left-8 md:-left-12 -bottom-8 md:-bottom-12 w-full h-full bg-brand-warm z-0 rounded-sm">
                     </div>
-                    <img src="assets/michaela-osobni-stylistka-o-mne.jpeg?v=2" alt="Michaela – osobní stylistka"
+                    <img src="{{ about.image }}" alt="Michaela – osobní stylistka"
                         class="relative z-10 w-full object-cover object-top aspect-[3/4]" id="about-image"
                         loading="lazy" decoding="async">
                 </div>
@@ -295,19 +295,19 @@
                     </div>
                     <div class="grid grid-cols-3 gap-6 md:gap-8 text-center border-t border-gray-200 pt-8">
                         <div>
-                            <div class="font-serif text-2xl md:text-3xl mb-1 tracking-tight text-brand-burgundy">44
+                            <div class="font-serif text-2xl md:text-3xl mb-1 tracking-tight text-brand-burgundy">{{ about.stat1_val }}
                             </div>
-                            <div class="text-xs text-gray-500 font-light">moje velikost</div>
+                            <div class="text-xs text-gray-500 font-light">{{ about.stat1_label }}</div>
                         </div>
                         <div>
-                            <div class="font-serif text-2xl md:text-3xl mb-1 tracking-tight text-brand-burgundy">40+
+                            <div class="font-serif text-2xl md:text-3xl mb-1 tracking-tight text-brand-burgundy">{{ about.stat2_val }}
                             </div>
-                            <div class="text-xs text-gray-500 font-light">věk mých klientek</div>
+                            <div class="text-xs text-gray-500 font-light">{{ about.stat2_label }}</div>
                         </div>
                         <div>
-                            <div class="font-serif text-2xl md:text-3xl mb-1 tracking-tight text-brand-burgundy">100%
+                            <div class="font-serif text-2xl md:text-3xl mb-1 tracking-tight text-brand-burgundy">{{ about.stat3_val }}
                             </div>
-                            <div class="text-xs text-gray-500 font-light">autentický přístup</div>
+                            <div class="text-xs text-gray-500 font-light">{{ about.stat3_label }}</div>
                         </div>
                     </div>
                 </div>
@@ -317,61 +317,32 @@
         <!-- Services Section -->
         <section id="sluzby" class="max-w-7xl mx-auto px-6 py-24 md:py-32">
             <div class="text-center mb-16 fade-in">
-                <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4">Služby</p>
-                <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight mb-4">Služby osobní stylistky</h2>
-                <p class="text-gray-600 max-w-xl mx-auto">Každá žena je jiná — proto je každý styling šitý na míru právě
-                    vám.</p>
+                <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4">{{ services.tag }}</p>
+                <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight mb-4">{{ services.title }}</h2>
+                <p class="text-gray-600 max-w-xl mx-auto">{{ services.description }}</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8 fade-in">
-                <!-- Service 1 – Osobní nákupy -->
+                {% for item in services.items %}
                 <div class="service-card border border-gray-100 rounded-sm p-8 bg-white group cursor-pointer">
                     <div
                         class="w-14 h-14 bg-brand-cream rounded-full flex items-center justify-center mb-6 group-hover:bg-brand-burgundy transition-colors">
-                        <i data-lucide="shopping-bag"
+                        <i data-lucide="{{ item.icon }}"
                             class="w-6 h-6 text-brand-burgundy group-hover:text-white transition-colors"
                             stroke-width="1.5"></i>
                     </div>
-                    <h3 class="font-serif text-xl mb-3 tracking-tight">Osobní nákupy</h3>
+                    <h3 class="font-serif text-xl mb-3 tracking-tight">{{ item.title }}</h3>
                     <p class="text-sm text-gray-600 leading-relaxed font-light">
-                        Ty napíšeš. Já vyberu. Já přivezu. Přesně to, co vám sluší — z obchodů, které milujete.
+                        {{ item.desc }}
                     </p>
                 </div>
-
-                <!-- Service 2 – Styling na míru -->
-                <div class="service-card border border-gray-100 rounded-sm p-8 bg-white group cursor-pointer">
-                    <div
-                        class="w-14 h-14 bg-brand-cream rounded-full flex items-center justify-center mb-6 group-hover:bg-brand-burgundy transition-colors">
-                        <i data-lucide="sparkles"
-                            class="w-6 h-6 text-brand-burgundy group-hover:text-white transition-colors"
-                            stroke-width="1.5"></i>
-                    </div>
-                    <h3 class="font-serif text-xl mb-3 tracking-tight">Styling na míru</h3>
-                    <p class="text-sm text-gray-600 leading-relaxed font-light">
-                        Pomůžu vám složit outfity z toho, co už máte — a doplnit to, co chybí. Minimum kusů, maximum
-                        stylu.
-                    </p>
-                </div>
-
-                <!-- Service 4 – Třídění šatníku -->
-                <div class="service-card border border-gray-100 rounded-sm p-8 bg-white group cursor-pointer">
-                    <div
-                        class="w-14 h-14 bg-brand-cream rounded-full flex items-center justify-center mb-6 group-hover:bg-brand-burgundy transition-colors">
-                        <i data-lucide="shirt"
-                            class="w-6 h-6 text-brand-burgundy group-hover:text-white transition-colors"
-                            stroke-width="1.5"></i>
-                    </div>
-                    <h3 class="font-serif text-xl mb-3 tracking-tight">Třídění šatníku</h3>
-                    <p class="text-sm text-gray-600 leading-relaxed font-light">
-                        Minimální šatník, maximální styl. Zbavíme vás chaosu a vytvoříme systém, který funguje.
-                    </p>
-                </div>
+                {% endfor %}
             </div>
 
             <div class="text-center mt-12 fade-in">
                 <a href="#kontakt"
                     class="btn-primary inline-block bg-brand-burgundy text-white px-8 py-4 text-sm font-medium hover:bg-brand-dark transition-colors rounded-sm">
-                    Nevíte, kde začít? Napište mi
+                    {{ services.btn_text }}
                 </a>
             </div>
         </section>
@@ -380,47 +351,21 @@
         <section class="bg-brand-cream py-24 md:py-32">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="text-center mb-16 fade-in">
-                    <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4">Osobní přístup</p>
-                    <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight">Proč si vybrat mě</h2>
+                    <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4">{{ reasons.tag }}</p>
+                    <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight">{{ reasons.title }}</h2>
                 </div>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 fade-in">
+                    {% for item in reasons.items %}
                     <div class="text-center p-6">
                         <div
                             class="w-16 h-16 bg-brand-burgundy rounded-full flex items-center justify-center mx-auto mb-5">
-                            <i data-lucide="heart" class="w-7 h-7 text-white" stroke-width="1.5"></i>
+                            <i data-lucide="{{ item.icon }}" class="w-7 h-7 text-white" stroke-width="1.5"></i>
                         </div>
-                        <h3 class="font-serif text-lg mb-2">Sama nosím vel. 44</h3>
-                        <p class="text-sm text-gray-600 font-light leading-relaxed">Nejsem modelka. Rozumím vašemu tělu,
-                            protože mám podobné.</p>
+                        <h3 class="font-serif text-lg mb-2">{{ item.title }}</h3>
+                        <p class="text-sm text-gray-600 font-light leading-relaxed">{{ item.desc }}</p>
                     </div>
-                    <div class="text-center p-6">
-                        <div
-                            class="w-16 h-16 bg-brand-burgundy rounded-full flex items-center justify-center mx-auto mb-5">
-                            <i data-lucide="wallet" class="w-7 h-7 text-white" stroke-width="1.5"></i>
-                        </div>
-                        <h3 class="font-serif text-lg mb-2">Bez luxusního rozpočtu</h3>
-                        <p class="text-sm text-gray-600 font-light leading-relaxed">Nakupuji v H&M, Zara, C&A, Lindex.
-                            Styl nemusí stát majlant.</p>
-                    </div>
-                    <div class="text-center p-6">
-                        <div
-                            class="w-16 h-16 bg-brand-burgundy rounded-full flex items-center justify-center mx-auto mb-5">
-                            <i data-lucide="ban" class="w-7 h-7 text-white" stroke-width="1.5"></i>
-                        </div>
-                        <h3 class="font-serif text-lg mb-2">Bez diet a výmluv</h3>
-                        <p class="text-sm text-gray-600 font-light leading-relaxed">Žádné „až zhubnu". Krásně můžete
-                            vypadat právě teď.</p>
-                    </div>
-                    <div class="text-center p-6">
-                        <div
-                            class="w-16 h-16 bg-brand-burgundy rounded-full flex items-center justify-center mx-auto mb-5">
-                            <i data-lucide="eye" class="w-7 h-7 text-white" stroke-width="1.5"></i>
-                        </div>
-                        <h3 class="font-serif text-lg mb-2">Praktické rady</h3>
-                        <p class="text-sm text-gray-600 font-light leading-relaxed">Žádná teorie. Jdeme spolu do kabinky
-                            a uvidíte ten rozdíl.</p>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </section>
@@ -428,46 +373,23 @@
         <!-- How It Works Section -->
         <section id="jak-to-funguje" class="max-w-7xl mx-auto px-6 py-24 md:py-32">
             <div class="text-center mb-16 md:mb-20 fade-in">
-                <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4">Proces spolupráce</p>
-                <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight">3 kroky ke stylovému šatníku</h2>
+                <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4">{{ process.tag }}</p>
+                <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight">{{ process.title }}</h2>
             </div>
             <div class="grid md:grid-cols-3 gap-12 md:gap-16 fade-in">
+                {% for item in process.items %}
                 <div class="flex items-start gap-6 relative">
                     <span
-                        class="step-number font-serif text-7xl md:text-8xl text-brand-cream leading-none absolute -left-2 -top-6 -z-10 select-none">01</span>
+                        class="step-number font-serif text-7xl md:text-8xl text-brand-cream leading-none absolute -left-2 -top-6 -z-10 select-none">{{ item.number }}</span>
                     <div class="pt-6 z-10">
                         <div class="w-10 h-10 bg-brand-burgundy rounded-full flex items-center justify-center mb-4">
-                            <i data-lucide="message-circle" class="w-5 h-5 text-white" stroke-width="1.5"></i>
+                            <i data-lucide="{{ item.icon }}" class="w-5 h-5 text-white" stroke-width="1.5"></i>
                         </div>
-                        <h3 class="text-lg font-medium mb-3">Napíšete mi</h3>
-                        <p class="text-sm text-gray-600 font-light leading-relaxed">Řeknete mi o sobě, svém stylu,
-                            postavě a tom, co řešíte. Nezávazně a bez obav.</p>
+                        <h3 class="text-lg font-medium mb-3">{{ item.title }}</h3>
+                        <p class="text-sm text-gray-600 font-light leading-relaxed">{{ item.desc }}</p>
                     </div>
                 </div>
-                <div class="flex items-start gap-6 relative">
-                    <span
-                        class="step-number font-serif text-7xl md:text-8xl text-brand-cream leading-none absolute -left-2 -top-6 -z-10 select-none">02</span>
-                    <div class="pt-6 z-10">
-                        <div class="w-10 h-10 bg-brand-burgundy rounded-full flex items-center justify-center mb-4">
-                            <i data-lucide="users" class="w-5 h-5 text-white" stroke-width="1.5"></i>
-                        </div>
-                        <h3 class="text-lg font-medium mb-3">Společně vybereme</h3>
-                        <p class="text-sm text-gray-600 font-light leading-relaxed">Navrhneme barvy, střihy a outfity
-                            přesně pro vás. Spolu určitě najdeme ten správný styl.</p>
-                    </div>
-                </div>
-                <div class="flex items-start gap-6 relative">
-                    <span
-                        class="step-number font-serif text-7xl md:text-8xl text-brand-cream leading-none absolute -left-2 -top-6 -z-10 select-none">03</span>
-                    <div class="pt-6 z-10">
-                        <div class="w-10 h-10 bg-brand-burgundy rounded-full flex items-center justify-center mb-4">
-                            <i data-lucide="star" class="w-5 h-5 text-white" stroke-width="1.5"></i>
-                        </div>
-                        <h3 class="text-lg font-medium mb-3">Zazáříte</h3>
-                        <p class="text-sm text-gray-600 font-light leading-relaxed">Každé ráno před skříní budete vědět,
-                            co na sebe. Bez stresu, s úsměvem.</p>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </section>
 
@@ -475,11 +397,12 @@
         <section id="recenze" class="bg-brand-cream py-24 md:py-32">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="text-center mb-16 fade-in">
-                    <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4">Spokojené klientky</p>
-                    <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight">Recenze mých klientek</h2>
+                    <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4">{{ testimonials.tag }}</p>
+                    <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight">{{ testimonials.title }}</h2>
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-8 md:gap-12 fade-in">
+                    {% for item in testimonials.items %}
                     <div class="bg-white p-8 rounded-sm border border-gray-100 relative">
                         <div
                             class="text-brand-burgundy/20 font-serif text-6xl absolute top-4 right-6 leading-none select-none">
@@ -492,57 +415,14 @@
                             <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-brand-gold" stroke-width="0"></i>
                         </div>
                         <p class="text-sm text-gray-600 leading-relaxed font-light mb-6">
-                            Michaela mi úplně změnila pohled na můj šatník. Ukázala mi, jak kombinovat kousky, které
-                            jsem měla léta v šatníku, a najednou vypadám každý den jinak — přitom jsem koupila jen pár
-                            věcí. Konečně se cítím dobře ve svém těle.
+                            {{ item.text }}
                         </p>
                         <div class="border-t border-gray-100 pt-4">
-                            <h4 class="font-serif text-lg tracking-tight">Jana</h4>
-                            <p class="text-xs text-gray-400">Klientka · styling na míru</p>
+                            <h4 class="font-serif text-lg tracking-tight">{{ item.name }}</h4>
+                            <p class="text-xs text-gray-400">{{ item.service }}</p>
                         </div>
                     </div>
-
-                    <div class="bg-white p-8 rounded-sm border border-gray-100 relative">
-                        <div
-                            class="text-brand-burgundy/20 font-serif text-6xl absolute top-4 right-6 leading-none select-none">
-                            "</div>
-                        <div class="flex gap-1 mb-4">
-                            <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-brand-gold" stroke-width="0"></i>
-                            <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-brand-gold" stroke-width="0"></i>
-                            <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-brand-gold" stroke-width="0"></i>
-                            <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-brand-gold" stroke-width="0"></i>
-                            <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-brand-gold" stroke-width="0"></i>
-                        </div>
-                        <p class="text-sm text-gray-600 leading-relaxed font-light mb-6">
-                            Vždy jsem si říkala, že na mě nic nevypadá dobře. Michaela mi dokázala, že to není pravda —
-                            stačí znát správné střihy a barvy. Teď se těším na každé ráno, protože vím, co si obléknu.
-                        </p>
-                        <div class="border-t border-gray-100 pt-4">
-                            <h4 class="font-serif text-lg tracking-tight">Mirka</h4>
-                            <p class="text-xs text-gray-400">Klientka · barvová typologie + nákupy</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-white p-8 rounded-sm border border-gray-100 relative">
-                        <div
-                            class="text-brand-burgundy/20 font-serif text-6xl absolute top-4 right-6 leading-none select-none">
-                            "</div>
-                        <div class="flex gap-1 mb-4">
-                            <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-brand-gold" stroke-width="0"></i>
-                            <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-brand-gold" stroke-width="0"></i>
-                            <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-brand-gold" stroke-width="0"></i>
-                            <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-brand-gold" stroke-width="0"></i>
-                            <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-brand-gold" stroke-width="0"></i>
-                        </div>
-                        <p class="text-sm text-gray-600 leading-relaxed font-light mb-6">
-                            Nejlepší investice, kterou jsem kdy udělala. Michaela mi nakoupila celý šatník za zlomek
-                            toho, co bych utratila sama — a všechno si sedí dohromady. Prostě profi!
-                        </p>
-                        <div class="border-t border-gray-100 pt-4">
-                            <h4 class="font-serif text-lg tracking-tight">Pavla</h4>
-                            <p class="text-xs text-gray-400">Klientka · osobní nákupy</p>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </section>
@@ -551,18 +431,16 @@
         <section id="kontakt"
             class="max-w-7xl mx-auto px-6 py-24 md:py-32 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
             <div class="fade-in">
-                <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4">Připravena na změnu?
-                </p>
+                <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4">{{ cta.tag }}</p>
                 <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl leading-tight tracking-tight mb-6">
-                    Nejčastější módní chyba?<br>
-                    <span class="text-brand-burgundy italic">Nakupování bez konceptu.</span>
+                    {{ cta.title | safe }}
+                    <span class="text-brand-burgundy italic">{{ cta.title_highlight }}</span>
                 </h2>
                 <p class="text-base text-gray-600 mb-10 font-light leading-relaxed">
-                    Styl není o počtu kusů v šatníku, ale o sebevědomí a schopnosti vyjádřit svou osobnost. Pojďme to
-                    změnit — společně.
+                    {{ cta.description }}
                 </p>
                 <div class="space-y-4 mb-10">
-                    <a href="https://www.instagram.com/stylovav50/" target="_blank"
+                    <a href="{{ cta.instagram_link }}" target="_blank"
                         class="flex items-center gap-4 text-sm text-gray-700 hover:text-brand-burgundy transition-colors group">
                         <div
                             class="w-12 h-12 bg-brand-cream rounded-full flex items-center justify-center group-hover:bg-brand-burgundy transition-colors">
@@ -571,11 +449,11 @@
                                 stroke-width="1.5"></i>
                         </div>
                         <div>
-                            <div class="font-medium">Instagram</div>
-                            <div class="text-xs text-gray-400">@stylovav50</div>
+                            <div class="font-medium">{{ cta.instagram_label }}</div>
+                            <div class="text-xs text-gray-400">{{ cta.instagram_value }}</div>
                         </div>
                     </a>
-                    <a href="mailto:stylovav50@seznam.cz"
+                    <a href="mailto:{{ cta.email_value }}"
                         class="flex items-center gap-4 text-sm text-gray-700 hover:text-brand-burgundy transition-colors group">
                         <div
                             class="w-12 h-12 bg-brand-cream rounded-full flex items-center justify-center group-hover:bg-brand-burgundy transition-colors">
@@ -584,11 +462,11 @@
                                 stroke-width="1.5"></i>
                         </div>
                         <div>
-                            <div class="font-medium">E-mail</div>
-                            <div class="text-xs text-gray-400">stylovav50@seznam.cz</div>
+                            <div class="font-medium">{{ cta.email_label }}</div>
+                            <div class="text-xs text-gray-400">{{ cta.email_value }}</div>
                         </div>
                     </a>
-                    <a href="tel:+420775664567"
+                    <a href="tel:{{ cta.phone_value }}"
                         class="flex items-center gap-4 text-sm text-gray-700 hover:text-brand-burgundy transition-colors group">
                         <div
                             class="w-12 h-12 bg-brand-cream rounded-full flex items-center justify-center group-hover:bg-brand-burgundy transition-colors">
@@ -597,8 +475,8 @@
                                 stroke-width="1.5"></i>
                         </div>
                         <div>
-                            <div class="font-medium">Telefon</div>
-                            <div class="text-xs text-gray-400">775 664 567</div>
+                            <div class="font-medium">{{ cta.phone_label }}</div>
+                            <div class="text-xs text-gray-400">{{ cta.phone_value }}</div>
                         </div>
                     </a>
                 </div>
@@ -607,7 +485,7 @@
                 <div
                     class="absolute -left-4 md:-left-6 bottom-[-16px] md:bottom-[-24px] w-2/3 h-4 bg-brand-burgundy z-20 rounded-sm">
                 </div>
-                <img src="assets/michaela-styling-konzultace.jpeg" alt="Michaela stylistka"
+                <img src="{{ cta.image }}" alt="Michaela stylistka"
                     class="relative z-10 w-full object-cover object-top aspect-[3/4]" id="cta-image" loading="lazy"
                     decoding="async">
             </div>
@@ -617,42 +495,25 @@
         <section id="instagram" class="bg-brand-cream py-24 md:py-32">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="text-center mb-12 fade-in">
-                    <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4">Instagram</p>
-                    <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight mb-4">Sledujte mě na
-                        Instagramu</h2>
-                    <p class="text-gray-600">Každý den nová inspirace, outfity a tipy pro ženy 40+</p>
+                    <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4">{{ instagram.tag }}</p>
+                    <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight mb-4">{{ instagram.title }}</h2>
+                    <p class="text-gray-600">{{ instagram.description }}</p>
                 </div>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-12 fade-in">
-                    <a href="https://www.instagram.com/p/DUjJ-5iiOJQ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="aspect-[4/5] bg-brand-warm rounded-sm overflow-hidden group block">
-                        <img src="assets/ig_thumb_DUjJ-5iiOJQ.jpg"
-                            alt="Instagram příspěvek – ukázka práce a módní inspirace"
+                    {% for item in instagram.items %}
+                    <a href="{{ item.link }}" target="_blank" class="aspect-[4/5] bg-brand-warm rounded-sm overflow-hidden group block">
+                        <img src="{{ item.image }}"
+                            alt="{{ item.alt }}"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                             loading="lazy" decoding="async">
                     </a>
-                    <a href="https://www.instagram.com/reel/DWJW5lSCGuU/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="aspect-[4/5] bg-brand-warm rounded-sm overflow-hidden group block">
-                        <img src="assets/ig_thumb_DWJW5lSCGuU.jpg"
-                            alt="Instagram video – tipy na styling pro plnoštíhlé ženy"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                            loading="lazy" decoding="async">
-                    </a>
-                    <a href="https://www.instagram.com/p/DQz97X9iPH-/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="aspect-[4/5] bg-brand-warm rounded-sm overflow-hidden group block">
-                        <img src="assets/ig_thumb_DQz97X9iPH-.jpg"
-                            alt="Instagram příspěvek – kombinace barev v outfitu"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                            loading="lazy" decoding="async">
-                    </a>
-                    <a href="https://www.instagram.com/p/DTD9YwxiJCX/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="aspect-[4/5] bg-brand-warm rounded-sm overflow-hidden group block">
-                        <img src="assets/ig_thumb_DTD9YwxiJCX.jpg"
-                            alt="Instagram příspěvek – osobní nákupy a výběr šatníku"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                            loading="lazy" decoding="async">
-                    </a>
+                    {% endfor %}
                 </div>
                 <div class="text-center fade-in">
-                    <a href="https://www.instagram.com/stylovav50/" target="_blank"
+                    <a href="{{ instagram.btn_link }}" target="_blank"
                         class="border border-brand-burgundy text-brand-burgundy px-8 py-3.5 text-sm font-medium hover:bg-brand-burgundy hover:text-white transition-all inline-flex items-center gap-3 rounded-sm">
                         <i data-lucide="instagram" class="w-4 h-4" stroke-width="1.5"></i>
-                        Sledovat @stylovav50
+                        {{ instagram.btn_text }}
                     </a>
                 </div>
             </div>
@@ -664,7 +525,7 @@
     <footer class="bg-brand-text text-white/60 py-16">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-10">
-                <div class="font-serif text-3xl text-white italic tracking-tight">Michaela</div>
+                <div class="font-serif text-3xl text-white italic tracking-tight">{{ footer.name }}</div>
 
                 <nav class="flex flex-wrap justify-center gap-6 md:gap-8 text-xs font-light tracking-wide uppercase"
                     aria-label="Patičková navigace">
@@ -676,19 +537,19 @@
                 </nav>
 
                 <div class="flex flex-col items-center md:items-end gap-2 text-xs font-light">
-                    <a href="https://www.instagram.com/stylovav50/" target="_blank"
+                    <a href="{{ footer.instagram_link }}" target="_blank"
                         class="hover:text-white transition-colors flex items-center gap-2">
                         <i data-lucide="instagram" class="w-4 h-4" stroke-width="1.5"></i>
-                        @stylovav50
+                        {{ footer.instagram_label }}
                     </a>
-                    <a href="mailto:msulerova@seznam.cz"
-                        class="hover:text-white transition-colors">msulerova@seznam.cz</a>
-                    <a href="tel:+420775664567" class="hover:text-white transition-colors">775 664 567</a>
+                    <a href="mailto:{{ footer.email }}"
+                        class="hover:text-white transition-colors">{{ footer.email }}</a>
+                    <a href="tel:{{ footer.phone | replace(' ', '') }}" class="hover:text-white transition-colors">{{ footer.phone }}</a>
                 </div>
             </div>
             <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-xs">&copy; 2026 Michaela – Osobní stylistka. Všechna práva vyhrazena.</p>
-                <p class="text-xs text-white/30">Styl nemá velikost.</p>
+                <p class="text-xs">{{ footer.copyright }}</p>
+                <p class="text-xs text-white/30">{{ footer.slogan }}</p>
             </div>
         </div>
     </footer>

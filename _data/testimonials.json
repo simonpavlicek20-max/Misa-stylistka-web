@@ -1,0 +1,21 @@
+{
+  "tag": "Spokojené klientky",
+  "title": "Recenze mých klientek",
+  "items": [
+    {
+      "text": "Michaela mi úplně změnila pohled na můj šatník. Ukázala mi, jak kombinovat kousky, které jsem měla léta v šatníku, a najednou vypadám každý den jinak — přitom jsem koupila jen pár věcí. Konečně se cítím dobře ve svém těle.",
+      "name": "Jana",
+      "service": "Klientka · styling na míru"
+    },
+    {
+      "text": "Vždy jsem si říkala, že na mě nic nevypadá dobře. Michaela mi dokázala, že to není pravda — stačí znát správné střihy a barvy. Teď se těším na každé ráno, protože vím, co si obléknu.",
+      "name": "Mirka",
+      "service": "Klientka · barvová typologie + nákupy"
+    },
+    {
+      "text": "Nejlepší investice, kterou jsem kdy udělala. Michaela mi nakoupila celý šatník za zlomek toho, co bych utratila sama — a všechno si sedí dohromady. Prostě profi!",
+      "name": "Pavla",
+      "service": "Klientka · osobní nákupy"
+    }
+  ]
+}
