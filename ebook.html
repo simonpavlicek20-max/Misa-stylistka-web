@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-booky zdarma | Michaela – Osobní stylistka</title>
+    <meta name="description" content="Stáhněte si zdarma e-booky o stylu, módě a sebevědomí pro ženy 40+. Praktické tipy od osobní stylistky Michaely.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://stylovav50.cz/ebook.html">
+    <link rel="icon" href="assets/favicon.ico" sizes="any">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stylovav50.cz/ebook.html">
+    <meta property="og:title" content="E-booky zdarma | Michaela – Osobní stylistka">
+    <meta property="og:description" content="Stáhněte si zdarma e-booky o stylu, módě a sebevědomí pro ženy 40+. Praktické tipy od osobní stylistky Michaely.">
+    <meta property="og:image" content="https://stylovav50.cz/assets/michaela-osobni-stylistka-hero.jpeg">
+    <meta property="og:locale" content="cs_CZ">
+    <meta property="og:site_name" content="Michaela – Osobní stylistka">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="E-booky zdarma | Michaela – Osobní stylistka">
+    <meta name="twitter:description" content="Praktické tipy o stylu, módě a sebevědomí pro ženy 40+. Zdarma ke stažení.">
+    <meta name="twitter:image" content="https://stylovav50.cz/assets/michaela-osobni-stylistka-hero.jpeg">
+
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            burgundy: '#7A2E3A',
+                            dark: '#5C1E2A',
+                            cream: '#FAF7F2',
+                            warm: '#F3EDE4',
+                            gold: '#C9A96E',
+                            text: '#2D2926',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+
+        /* Smooth scroll */
+        html { scroll-behavior: smooth; }
+
+        /* Fade-in on scroll */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Ebook card hover */
+        .ebook-card {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .ebook-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(122, 46, 58, 0.12);
+        }
+
+        /* Button hover glow */
+        .btn-primary {
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            box-shadow: 0 8px 30px rgba(122, 46, 58, 0.3);
+            transform: translateY(-1px);
+        }
+
+        /* Mobile menu */
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+        .mobile-menu.open {
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body class="text-brand-text antialiased selection:bg-brand-burgundy selection:text-white bg-white">
+
+    <!-- Navigation -->
+    <header class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center bg-white/95 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-100">
+        <a href="index.html" class="font-serif text-2xl md:text-3xl text-brand-burgundy italic tracking-tight">Michaela</a>
+        <nav class="hidden md:flex gap-8 text-sm font-normal" aria-label="Hlavní navigace">
+            <a href="index.html#o-mne" class="hover:text-brand-burgundy transition-colors">O mně</a>
+            <a href="index.html#sluzby" class="hover:text-brand-burgundy transition-colors">Služby</a>
+            <a href="index.html#jak-to-funguje" class="hover:text-brand-burgundy transition-colors">Jak to funguje</a>
+            <a href="index.html#recenze" class="hover:text-brand-burgundy transition-colors">Recenze</a>
+            <a href="index.html#kontakt" class="hover:text-brand-burgundy transition-colors">Kontakt</a>
+            <a href="ebook.html" class="text-brand-burgundy font-medium transition-colors">E-book</a>
+        </nav>
+        <a href="index.html#kontakt" class="hidden md:inline-block border border-brand-burgundy text-brand-burgundy px-6 py-2.5 text-sm font-normal hover:bg-brand-burgundy hover:text-white transition-all rounded-sm">
+            Napište mi
+        </a>
+        <!-- Mobile menu button -->
+        <button id="menu-toggle" class="md:hidden p-2">
+            <i data-lucide="menu" class="w-6 h-6" stroke-width="1.5"></i>
+        </button>
+    </header>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="mobile-menu md:hidden bg-white border-b border-gray-100 px-6">
+        <nav class="flex flex-col gap-4 py-6 text-sm" aria-label="Mobilní navigace">
+            <a href="index.html#o-mne" class="hover:text-brand-burgundy transition-colors">O mně</a>
+            <a href="index.html#sluzby" class="hover:text-brand-burgundy transition-colors">Služby</a>
+            <a href="index.html#jak-to-funguje" class="hover:text-brand-burgundy transition-colors">Jak to funguje</a>
+            <a href="index.html#recenze" class="hover:text-brand-burgundy transition-colors">Recenze</a>
+            <a href="index.html#kontakt" class="hover:text-brand-burgundy transition-colors">Kontakt</a>
+            <a href="ebook.html" class="text-brand-burgundy font-medium transition-colors">E-book</a>
+            <a href="index.html#kontakt" class="inline-block text-center border border-brand-burgundy text-brand-burgundy px-6 py-2.5 text-sm font-normal hover:bg-brand-burgundy hover:text-white transition-all rounded-sm mt-2">
+                Napište mi
+            </a>
+        </nav>
+    </div>
+
+    <main>
+    <!-- Hero Section -->
+    <section class="bg-brand-cream py-20 md:py-28">
+        <div class="max-w-7xl mx-auto px-6 text-center fade-in">
+            <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-6">Zdarma ke stažení</p>
+            <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight mb-6">
+                E-booky pro ženy,<br>
+                <span class="text-brand-burgundy italic">které chtějí zazářit</span>
+            </h1>
+            <p class="text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                Praktické tipy o stylu, barvách a sebevědomí — vše na jednom místě, zdarma a bez závazků.
+            </p>
+        </div>
+    </section>
+
+    <!-- E-books Grid Section -->
+    <section class="max-w-7xl mx-auto px-6 py-24 md:py-32">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 fade-in">
+
+            <!-- Placeholder Card - Brzy přidáme -->
+            <div class="ebook-card border border-dashed border-gray-300 rounded-sm bg-brand-cream/50 p-8 flex flex-col items-center justify-center text-center min-h-[400px]">
+                <div class="w-16 h-16 bg-brand-cream rounded-full flex items-center justify-center mb-6">
+                    <i data-lucide="book-open" class="w-7 h-7 text-brand-burgundy" stroke-width="1.5"></i>
+                </div>
+                <h3 class="font-serif text-xl mb-3 tracking-tight text-brand-text">Brzy zde</h3>
+                <p class="text-sm text-gray-500 leading-relaxed font-light max-w-xs">
+                    Připravujeme pro vás první e-book plný praktických tipů. Sledujte náš Instagram, ať vám nic neunikne!
+                </p>
+                <a href="https://www.instagram.com/stylovav50/" target="_blank" class="mt-6 border border-brand-burgundy text-brand-burgundy px-6 py-2.5 text-sm font-medium hover:bg-brand-burgundy hover:text-white transition-all inline-flex items-center gap-2 rounded-sm">
+                    <i data-lucide="instagram" class="w-4 h-4" stroke-width="1.5"></i>
+                    Sledovat @stylovav50
+                </a>
+            </div>
+
+            <!--
+            ========================================
+            ŠABLONA PRO NOVÝ E-BOOK
+            Zkopírujte tento blok a vyplňte údaje:
+            ========================================
+
+            <div class="ebook-card border border-gray-100 rounded-sm bg-white overflow-hidden group">
+                <div class="aspect-[3/4] bg-brand-warm overflow-hidden">
+                    <img src="assets/NAZEV-OBRAZKU.jpg" alt="Název e-booku" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="p-8">
+                    <h3 class="font-serif text-xl mb-3 tracking-tight">Název e-booku</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed font-light mb-6">
+                        Krátký popis e-booku — o čem je a proč si ho stáhnout.
+                    </p>
+                    <a href="assets/NAZEV-SOUBORU.pdf" download class="btn-primary inline-flex items-center gap-2 bg-brand-burgundy text-white px-6 py-3 text-sm font-medium hover:bg-brand-dark transition-colors rounded-sm">
+                        <i data-lucide="download" class="w-4 h-4" stroke-width="1.5"></i>
+                        Stáhnout zdarma
+                    </a>
+                </div>
+            </div>
+
+            ========================================
+            -->
+
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-brand-cream py-20 md:py-28">
+        <div class="max-w-4xl mx-auto px-6 text-center fade-in">
+            <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4">Chcete víc?</p>
+            <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl leading-tight tracking-tight mb-6">
+                Osobní styling vám dá víc<br>
+                <span class="text-brand-burgundy italic">než jakýkoli e-book</span>
+            </h2>
+            <p class="text-base text-gray-600 mb-10 font-light leading-relaxed max-w-2xl mx-auto">
+                E-booky vám dají inspiraci, ale teprve osobní přístup vám pomůže najít styl šitý na míru právě vám.
+            </p>
+            <a href="index.html#kontakt" class="btn-primary inline-block bg-brand-burgundy text-white px-8 py-4 text-sm font-medium hover:bg-brand-dark transition-colors rounded-sm">
+                Chci změnu — napište mi
+            </a>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-text text-white/60 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-10">
+                <a href="index.html" class="font-serif text-3xl text-white italic tracking-tight">Michaela</a>
+
+                <nav class="flex flex-wrap justify-center gap-6 md:gap-8 text-xs font-light tracking-wide uppercase" aria-label="Patičková navigace">
+                    <a href="index.html#o-mne" class="hover:text-white transition-colors">O mně</a>
+                    <a href="index.html#sluzby" class="hover:text-white transition-colors">Služby</a>
+                    <a href="index.html#jak-to-funguje" class="hover:text-white transition-colors">Jak to funguje</a>
+                    <a href="index.html#recenze" class="hover:text-white transition-colors">Recenze</a>
+                    <a href="index.html#kontakt" class="hover:text-white transition-colors">Kontakt</a>
+                    <a href="index.html#instagram" class="hover:text-white transition-colors">Instagram</a>
+                    <a href="ebook.html" class="hover:text-white transition-colors">E-book</a>
+                </nav>
+
+                <div class="flex flex-col items-center md:items-end gap-2 text-xs font-light">
+                    <a href="https://www.instagram.com/stylovav50/" target="_blank" class="hover:text-white transition-colors flex items-center gap-2">
+                        <i data-lucide="instagram" class="w-4 h-4" stroke-width="1.5"></i>
+                        @stylovav50
+                    </a>
+                    <a href="mailto:stylovav50@seznam.cz" class="hover:text-white transition-colors">stylovav50@seznam.cz</a>
+                    <a href="tel:+420775664567" class="hover:text-white transition-colors">775 664 567</a>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs">&copy; 2026 Michaela – Osobní stylistka. Všechna práva vyhrazena.</p>
+                <p class="text-xs text-white/30">Styl nemá velikost.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons (wait for deferred script)
+        document.addEventListener('DOMContentLoaded', () => lucide.createIcons());
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (menuToggle && mobileMenu) {
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('open');
+            });
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('open');
+                });
+            });
+        }
+
+        // Scroll-triggered fade-in animations
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        fadeElements.forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>

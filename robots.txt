@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://stylovav50.cz/sitemap.xml
