@@ -172,141 +172,106 @@
 
     <!-- Navigation -->
     <header
-        class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center bg-white/95 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-100">
-        <a href="#" class="font-serif text-2xl md:text-3xl text-brand-burgundy italic tracking-tight editable">Michaela</a>
-        <nav class="hidden md:flex gap-8 text-sm font-normal" aria-label="Hlavní navigace">
-            <a href="#o-mne" class="hover:text-brand-burgundy transition-colors editable">O mně</a>
-            <a href="#sluzby" class="hover:text-brand-burgundy transition-colors editable">Služby</a>
-            <a href="#jak-to-funguje" class="hover:text-brand-burgundy transition-colors editable">Jak to funguje</a>
-            <a href="#recenze" class="hover:text-brand-burgundy transition-colors editable">Recenze</a>
-            <a href="#kontakt" class="hover:text-brand-burgundy transition-colors editable">Kontakt</a>
-            <a href="ebook.html" class="hover:text-brand-burgundy transition-colors editable">E-book</a>
+        class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center bg-white/95 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-100"> <a href="#" class="font-serif text-2xl md:text-3xl text-brand-burgundy italic tracking-tight">Michaela</a> <nav class="hidden md:flex gap-8 text-sm font-normal" aria-label="Hlavní navigace">
+            <a href="#o-mne" class="hover:text-brand-burgundy transition-colors">O mně</a> <a href="#sluzby" class="hover:text-brand-burgundy transition-colors">Služby</a> <a href="#jak-to-funguje" class="hover:text-brand-burgundy transition-colors">Jak to funguje</a> <a href="#recenze" class="hover:text-brand-burgundy transition-colors">Recenze</a> <a href="#kontakt" class="hover:text-brand-burgundy transition-colors">Kontakt</a> <a href="ebook.html" class="hover:text-brand-burgundy transition-colors">E-book</a>
         </nav>
         <a href="#kontakt"
-            class="hidden md:inline-block border border-brand-burgundy text-brand-burgundy px-6 py-2.5 text-sm font-normal hover:bg-brand-burgundy hover:text-white transition-all rounded-sm editable">
+            class="hidden md:inline-block border border-brand-burgundy text-brand-burgundy px-6 py-2.5 text-sm font-normal hover:bg-brand-burgundy hover:text-white transition-all rounded-sm">
             Napište mi
         </a>
         <!-- Mobile menu button -->
-        <button id="menu-toggle" class="md:hidden p-2">
-            <i data-lucide="menu" class="w-6 h-6" stroke-width="1.5"></i>
+        <button id="menu-toggle" class="md:hidden p-2"> <i data-lucide="menu" class="w-6 h-6" stroke-width="1.5"></i>
         </button>
     </header>
     <!-- Mobile menu -->
-    <div id="mobile-menu" class="mobile-menu md:hidden bg-white border-b border-gray-100 px-6">
-        <nav class="flex flex-col gap-4 py-6 text-sm" aria-label="Mobilní navigace">
-            <a href="#o-mne" class="hover:text-brand-burgundy transition-colors editable">O mně</a>
-            <a href="#sluzby" class="hover:text-brand-burgundy transition-colors editable">Služby</a>
-            <a href="#jak-to-funguje" class="hover:text-brand-burgundy transition-colors editable">Jak to funguje</a>
-            <a href="#recenze" class="hover:text-brand-burgundy transition-colors editable">Recenze</a>
-            <a href="#kontakt" class="hover:text-brand-burgundy transition-colors editable">Kontakt</a>
-            <a href="ebook.html" class="hover:text-brand-burgundy transition-colors editable">E-book</a>
-            <a href="#kontakt"
-                class="inline-block text-center border border-brand-burgundy text-brand-burgundy px-6 py-2.5 text-sm font-normal hover:bg-brand-burgundy hover:text-white transition-all rounded-sm mt-2 editable">
+    <div id="mobile-menu" class="mobile-menu md:hidden bg-white border-b border-gray-100 px-6"> <nav class="flex flex-col gap-4 py-6 text-sm" aria-label="Mobilní navigace">
+            <a href="#o-mne" class="hover:text-brand-burgundy transition-colors">O mně</a> <a href="#sluzby" class="hover:text-brand-burgundy transition-colors">Služby</a> <a href="#jak-to-funguje" class="hover:text-brand-burgundy transition-colors">Jak to funguje</a> <a href="#recenze" class="hover:text-brand-burgundy transition-colors">Recenze</a> <a href="#kontakt" class="hover:text-brand-burgundy transition-colors">Kontakt</a> <a href="ebook.html" class="hover:text-brand-burgundy transition-colors">E-book</a> <a href="#kontakt"
+                class="inline-block text-center border border-brand-burgundy text-brand-burgundy px-6 py-2.5 text-sm font-normal hover:bg-brand-burgundy hover:text-white transition-all rounded-sm mt-2">
                 Napište mi
             </a>
         </nav>
     </div>
 
     <main>
-        <section class="max-w-7xl mx-auto px-6 pt-12 pb-24 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-            <div class="max-w-xl fade-in">
-                <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-6 editable">{{ hero.tag }}</p>
-                <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl leading-[1.08] tracking-tight mb-8 editable">
+        <section class="max-w-7xl mx-auto px-6 pt-12 pb-24 grid md:grid-cols-2 gap-12 md:gap-16 items-center"> <div class="max-w-xl fade-in">
+                <p data-editable="text" data-prop="hero.tag" class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-6">{{ hero.tag }}</p> <h1 data-editable="text" data-prop="hero.title" class="font-serif text-4xl md:text-6xl lg:text-7xl leading-[1.08] tracking-tight mb-8">
                     {{ hero.title | safe }}
-                    <span class="text-brand-burgundy italic editable">{{ hero.highlight }}</span>
+                    <span data-editable="text" data-prop="hero.highlight" class="text-brand-burgundy italic">{{ hero.highlight }}</span>
                 </h1>
-                <p class="text-base md:text-lg text-gray-600 mb-10 leading-relaxed max-w-md editable">
+                <p data-editable="text" data-prop="hero.description" class="text-base md:text-lg text-gray-600 mb-10 leading-relaxed max-w-md">
                     {{ hero.description }}
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#kontakt"
-                        class="btn-primary bg-brand-burgundy text-white px-8 py-4 text-sm font-medium hover:bg-brand-dark transition-colors rounded-sm text-center editable">
+                <div class="flex flex-col sm:flex-row gap-4"> <a data-editable="text" data-prop="hero.btn1_text" href="#kontakt"
+                        class="btn-primary bg-brand-burgundy text-white px-8 py-4 text-sm font-medium hover:bg-brand-dark transition-colors rounded-sm text-center">
                         {{ hero.btn1_text }}
                     </a>
-                    <a href="#sluzby"
-                        class="border border-gray-300 px-8 py-4 text-sm font-normal hover:border-brand-burgundy hover:text-brand-burgundy transition-all rounded-sm text-center editable">
+                    <a data-editable="text" data-prop="hero.btn2_text" href="#sluzby"
+                        class="border border-gray-300 px-8 py-4 text-sm font-normal hover:border-brand-burgundy hover:text-brand-burgundy transition-all rounded-sm text-center">
                         {{ hero.btn2_text }}
                     </a>
                 </div>
-                <p class="text-xs text-gray-400 mt-6 editable">{{ hero.subtext }}</p>
+                <p data-editable="text" data-prop="hero.subtext" class="text-xs text-gray-400 mt-6">{{ hero.subtext }}</p>
             </div>
             <div class="relative w-full max-w-md ml-auto mt-10 md:mt-0 fade-in">
                 <div
                     class="absolute -right-4 md:-right-8 -top-4 md:-top-8 w-full h-[105%] bg-brand-burgundy z-0 rounded-sm">
                 </div>
-                <img src="{{ hero.image }}" alt="Michaela – osobní stylistka"
-                    class="relative z-10 w-full object-cover object-top aspect-[4/5]" id="hero-image"
-                    fetchpriority="high" decoding="async">
-                <div class="absolute -bottom-10 right-0 flex gap-6 text-sm font-normal text-gray-500 z-20">
-                    <a href="https://www.instagram.com/stylovav50/" target="_blank"
-                        class="hover:text-brand-burgundy transition-colors editable">Instagram</a>
-                    <a href="#kontakt" class="hover:text-brand-burgundy transition-colors editable">E-mail</a>
+                <img data-editable="image" data-prop-src="hero.image" src="{{ hero.image }}" alt="Michaela – osobní stylistka"
+                    class="relative z-10 w-full object-cover object-top aspect-[4/5]" id="hero-image" fetchpriority="high" decoding="async">
+                <div class="absolute -bottom-10 right-0 flex gap-6 text-sm font-normal text-gray-500 z-20"> <a href="https://www.instagram.com/stylovav50/" target="_blank"
+                        class="hover:text-brand-burgundy transition-colors">Instagram</a> <a href="#kontakt" class="hover:text-brand-burgundy transition-colors">E-mail</a>
                 </div>
             </div>
         </section>
 
         <!-- Marquee -->
         <div
-            class="w-full bg-brand-burgundy text-white/90 py-4 overflow-hidden flex whitespace-nowrap text-sm tracking-wide font-light">
-            <div class="animate-marquee flex gap-8 px-4">
-                <span class="editable">Styl nemá velikost</span>
-                <span class="text-white/40 editable">✦</span>
-                <span class="editable">Každá žena si zaslouží cítit se krásně</span>
-                <span class="text-white/40 editable">✦</span>
-                <span class="editable">Bez diet, bez výmluv – jen váš styl</span>
-                <span class="text-white/40 editable">✦</span>
-                <span class="editable">Věk a velikost jsou jen čísla</span>
-                <span class="text-white/40 editable">✦</span>
-                <span class="editable">Sleva není argument – styl ano</span>
-                <span class="text-white/40 editable">✦</span>
-                <span class="editable">Styl nemá velikost</span>
-                <span class="text-white/40 editable">✦</span>
-                <span class="editable">Každá žena si zaslouží cítit se krásně</span>
-                <span class="text-white/40 editable">✦</span>
-                <span class="editable">Bez diet, bez výmluv – jen váš styl</span>
-                <span class="text-white/40 editable">✦</span>
-                <span class="editable">Věk a velikost jsou jen čísla</span>
-                <span class="text-white/40 editable">✦</span>
-                <span class="editable">Sleva není argument – styl ano</span>
-                <span class="text-white/40 editable">✦</span>
+            class="w-full bg-brand-burgundy text-white/90 py-4 overflow-hidden flex whitespace-nowrap text-sm tracking-wide font-light"> <div class="animate-marquee flex gap-8 px-4">
+                <span class="">Styl nemá velikost</span> <span class="text-white/40">✦</span>
+                <span class="">Každá žena si zaslouží cítit se krásně</span> <span class="text-white/40">✦</span>
+                <span class="">Bez diet, bez výmluv – jen váš styl</span> <span class="text-white/40">✦</span>
+                <span class="">Věk a velikost jsou jen čísla</span> <span class="text-white/40">✦</span>
+                <span class="">Sleva není argument – styl ano</span> <span class="text-white/40">✦</span>
+                <span class="">Styl nemá velikost</span> <span class="text-white/40">✦</span>
+                <span class="">Každá žena si zaslouží cítit se krásně</span> <span class="text-white/40">✦</span>
+                <span class="">Bez diet, bez výmluv – jen váš styl</span> <span class="text-white/40">✦</span>
+                <span class="">Věk a velikost jsou jen čísla</span> <span class="text-white/40">✦</span>
+                <span class="">Sleva není argument – styl ano</span> <span class="text-white/40">✦</span>
             </div>
         </div>
 
         <!-- About Section -->
-        <section id="o-mne" class="bg-brand-cream py-24 md:py-32">
-            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 md:gap-20 items-center">
+        <section id="o-mne" class="bg-brand-cream py-24 md:py-32"> <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 md:gap-20 items-center">
                 <div class="relative w-full max-w-sm mx-auto fade-in">
                     <div
                         class="absolute -left-8 md:-left-12 -bottom-8 md:-bottom-12 w-full h-full bg-brand-warm z-0 rounded-sm">
                     </div>
-                    <img src="{{ about.image }}" alt="Michaela – osobní stylistka"
-                        class="relative z-10 w-full object-cover object-top aspect-[3/4]" id="about-image"
-                        loading="lazy" decoding="async">
+                    <img data-editable="image" data-prop-src="about.image" src="{{ about.image }}" alt="Michaela – osobní stylistka"
+                        class="relative z-10 w-full object-cover object-top aspect-[3/4]" id="about-image" loading="lazy" decoding="async">
                 </div>
-                <div class="max-w-lg fade-in">
-                    <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4 editable">{{ about.tag }}</p>
-                    <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl leading-tight tracking-tight mb-8 editable">
+                <div class="max-w-lg fade-in"> <p data-editable="text" data-prop="about.tag" class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4">{{ about.tag }}</p>
+                    <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl leading-tight tracking-tight mb-8">
                         {{ about.title | safe }}
-                        <span class="text-brand-burgundy italic editable">{{ about.title_highlight }}</span>
+                        <span data-editable="text" data-prop="hero.highlight" class="text-brand-burgundy italic">{{ about.title_highlight }}</span>
                     </h2>
-                    <div class="text-base text-gray-600 mb-10 leading-relaxed space-y-4">
+                    <div data-editable="text" data-prop="about.body" class="text-base text-gray-600 mb-10 leading-relaxed space-y-4">
                         {{ about.body | safe }}
                     </div>
                     <div class="grid grid-cols-3 gap-6 md:gap-8 text-center border-t border-gray-200 pt-8">
                         <div>
-                            <div class="font-serif text-2xl md:text-3xl mb-1 tracking-tight text-brand-burgundy editable">{{ about.stat1_val }}
+                            <div data-editable="text" data-prop="about.stat1_val" class="font-serif text-2xl md:text-3xl mb-1 tracking-tight text-brand-burgundy">{{ about.stat1_val }}
                             </div>
-                            <div class="text-xs text-gray-500 font-light editable">{{ about.stat1_label }}</div>
+                            <div data-editable="text" data-prop="about.stat1_label" class="text-xs text-gray-500 font-light">{{ about.stat1_label }}</div>
                         </div>
                         <div>
-                            <div class="font-serif text-2xl md:text-3xl mb-1 tracking-tight text-brand-burgundy editable">{{ about.stat2_val }}
+                            <div data-editable="text" data-prop="about.stat2_val" class="font-serif text-2xl md:text-3xl mb-1 tracking-tight text-brand-burgundy">{{ about.stat2_val }}
                             </div>
-                            <div class="text-xs text-gray-500 font-light editable">{{ about.stat2_label }}</div>
+                            <div data-editable="text" data-prop="about.stat2_label" class="text-xs text-gray-500 font-light">{{ about.stat2_label }}</div>
                         </div>
                         <div>
-                            <div class="font-serif text-2xl md:text-3xl mb-1 tracking-tight text-brand-burgundy editable">{{ about.stat3_val }}
+                            <div data-editable="text" data-prop="about.stat3_val" class="font-serif text-2xl md:text-3xl mb-1 tracking-tight text-brand-burgundy">{{ about.stat3_val }}
                             </div>
-                            <div class="text-xs text-gray-500 font-light editable">{{ about.stat3_label }}</div>
+                            <div data-editable="text" data-prop="about.stat3_label" class="text-xs text-gray-500 font-light">{{ about.stat3_label }}</div>
                         </div>
                     </div>
                 </div>
@@ -314,55 +279,45 @@
         </section>
 
         <!-- Services Section -->
-        <section id="sluzby" class="max-w-7xl mx-auto px-6 py-24 md:py-32">
-            <div class="text-center mb-16 fade-in">
-                <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4 editable">{{ services.tag }}</p>
-                <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight mb-4 editable">{{ services.title }}</h2>
-                <p class="text-gray-600 max-w-xl mx-auto editable">{{ services.description }}</p>
+        <section id="sluzby" class="max-w-7xl mx-auto px-6 py-24 md:py-32"> <div class="text-center mb-16 fade-in">
+                <p data-editable="text" data-prop="services.tag" class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4">{{ services.tag }}</p> <h2 data-editable="text" data-prop="services.title" class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight mb-4">{{ services.title }}</h2>
+                <p data-editable="text" data-prop="services.description" class="text-gray-600 max-w-xl mx-auto">{{ services.description }}</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8 fade-in">
+            <div data-editable="array" data-prop="services.items" class="grid md:grid-cols-3 gap-8 fade-in">
                 {% for item in services.items %}
-                <div class="service-card border border-gray-100 rounded-sm p-8 bg-white group cursor-pointer">
+                <div data-editable="array-item" class="service-card border border-gray-100 rounded-sm p-8 bg-white group cursor-pointer">
                     <div
-                        class="w-14 h-14 bg-brand-cream rounded-full flex items-center justify-center mb-6 group-hover:bg-brand-burgundy transition-colors">
-                        <i data-lucide="{{ item.icon }}"
-                            class="w-6 h-6 text-brand-burgundy group-hover:text-white transition-colors"
-                            stroke-width="1.5"></i>
+                        class="w-14 h-14 bg-brand-cream rounded-full flex items-center justify-center mb-6 group-hover:bg-brand-burgundy transition-colors"> <i data-lucide="{{ item.icon }}"
+                            class="w-6 h-6 text-brand-burgundy group-hover:text-white transition-colors" stroke-width="1.5"></i>
                     </div>
-                    <h3 class="font-serif text-xl mb-3 tracking-tight editable">{{ item.title }}</h3>
-                    <p class="text-sm text-gray-600 leading-relaxed font-light editable">
+                    <h3 data-editable="text" data-prop="title" class="font-serif text-xl mb-3 tracking-tight">{{ item.title }}</h3> <p data-editable="text" data-prop="desc" class="text-sm text-gray-600 leading-relaxed font-light">
                         {{ item.desc }}
                     </p>
                 </div>
                 {% endfor %}
             </div>
 
-            <div class="text-center mt-12 fade-in">
-                <a href="#kontakt"
-                    class="btn-primary inline-block bg-brand-burgundy text-white px-8 py-4 text-sm font-medium hover:bg-brand-dark transition-colors rounded-sm editable">
+            <div class="text-center mt-12 fade-in"> <a data-editable="text" data-prop="services.btn_text" href="#kontakt"
+                    class="btn-primary inline-block bg-brand-burgundy text-white px-8 py-4 text-sm font-medium hover:bg-brand-dark transition-colors rounded-sm">
                     {{ services.btn_text }}
                 </a>
             </div>
         </section>
 
         <!-- Why Me Section -->
-        <section class="bg-brand-cream py-24 md:py-32">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="text-center mb-16 fade-in">
-                    <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4 editable">{{ reasons.tag }}</p>
-                    <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight editable">{{ reasons.title }}</h2>
+        <section class="bg-brand-cream py-24 md:py-32"> <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16 fade-in"> <p data-editable="text" data-prop="reasons.tag" class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4">{{ reasons.tag }}</p>
+                    <h2 data-editable="text" data-prop="reasons.title" class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight">{{ reasons.title }}</h2>
                 </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 fade-in">
+                <div data-editable="array" data-prop="reasons.items" class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 fade-in">
                     {% for item in reasons.items %}
-                    <div class="text-center p-6">
+                    <div data-editable="array-item" class="text-center p-6">
                         <div
-                            class="w-16 h-16 bg-brand-burgundy rounded-full flex items-center justify-center mx-auto mb-5">
-                            <i data-lucide="{{ item.icon }}" class="w-7 h-7 text-white" stroke-width="1.5"></i>
+                            class="w-16 h-16 bg-brand-burgundy rounded-full flex items-center justify-center mx-auto mb-5"> <i data-lucide="{{ item.icon }}" class="w-7 h-7 text-white" stroke-width="1.5"></i>
                         </div>
-                        <h3 class="font-serif text-lg mb-2 editable">{{ item.title }}</h3>
-                        <p class="text-sm text-gray-600 font-light leading-relaxed editable">{{ item.desc }}</p>
+                        <h3 data-editable="text" data-prop="title" class="font-serif text-lg mb-2">{{ item.title }}</h3> <p data-editable="text" data-prop="desc" class="text-sm text-gray-600 font-light leading-relaxed">{{ item.desc }}</p>
                     </div>
                     {% endfor %}
                 </div>
@@ -370,22 +325,17 @@
         </section>
 
         <!-- How It Works Section -->
-        <section id="jak-to-funguje" class="max-w-7xl mx-auto px-6 py-24 md:py-32">
-            <div class="text-center mb-16 md:mb-20 fade-in">
-                <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4 editable">{{ process.tag }}</p>
-                <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight editable">{{ process.title }}</h2>
+        <section id="jak-to-funguje" class="max-w-7xl mx-auto px-6 py-24 md:py-32"> <div class="text-center mb-16 md:mb-20 fade-in">
+                <p data-editable="text" data-prop="process.tag" class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4">{{ process.tag }}</p> <h2 data-editable="text" data-prop="process.title" class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight">{{ process.title }}</h2>
             </div>
-            <div class="grid md:grid-cols-3 gap-12 md:gap-16 fade-in">
+            <div data-editable="array" data-prop="process.items" class="grid md:grid-cols-3 gap-12 md:gap-16 fade-in">
                 {% for item in process.items %}
-                <div class="flex items-start gap-6 relative">
-                    <span
-                        class="step-number font-serif text-7xl md:text-8xl text-brand-cream leading-none absolute -left-2 -top-6 -z-10 select-none editable">{{ item.number }}</span>
-                    <div class="pt-6 z-10">
-                        <div class="w-10 h-10 bg-brand-burgundy rounded-full flex items-center justify-center mb-4">
-                            <i data-lucide="{{ item.icon }}" class="w-5 h-5 text-white" stroke-width="1.5"></i>
+                <div data-editable="array-item" class="flex items-start gap-6 relative">
+                    <span data-editable="text" data-prop="number"
+                        class="step-number font-serif text-7xl md:text-8xl text-brand-cream leading-none absolute -left-2 -top-6 -z-10 select-none">{{ item.number }}</span> <div class="pt-6 z-10">
+                        <div class="w-10 h-10 bg-brand-burgundy rounded-full flex items-center justify-center mb-4"> <i data-lucide="{{ item.icon }}" class="w-5 h-5 text-white" stroke-width="1.5"></i>
                         </div>
-                        <h3 class="text-lg font-medium mb-3 editable">{{ item.title }}</h3>
-                        <p class="text-sm text-gray-600 font-light leading-relaxed editable">{{ item.desc }}</p>
+                        <h3 data-editable="text" data-prop="title" class="text-lg font-medium mb-3">{{ item.title }}</h3> <p data-editable="text" data-prop="desc" class="text-sm text-gray-600 font-light leading-relaxed">{{ item.desc }}</p>
                     </div>
                 </div>
                 {% endfor %}
@@ -393,32 +343,23 @@
         </section>
 
         <!-- Testimonials Section -->
-        <section id="recenze" class="bg-brand-cream py-24 md:py-32">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="text-center mb-16 fade-in">
-                    <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4 editable">{{ testimonials.tag }}</p>
-                    <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight editable">{{ testimonials.title }}</h2>
+        <section id="recenze" class="bg-brand-cream py-24 md:py-32"> <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16 fade-in"> <p data-editable="text" data-prop="testimonials.tag" class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4">{{ testimonials.tag }}</p>
+                    <h2 data-editable="text" data-prop="testimonials.title" class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight">{{ testimonials.title }}</h2>
                 </div>
 
-                <div class="grid md:grid-cols-3 gap-8 md:gap-12 fade-in">
+                <div data-editable="array" data-prop="testimonials.items" class="grid md:grid-cols-3 gap-8 md:gap-12 fade-in">
                     {% for item in testimonials.items %}
-                    <div class="bg-white p-8 rounded-sm border border-gray-100 relative">
+                    <div data-editable="array-item" class="bg-white p-8 rounded-sm border border-gray-100 relative">
                         <div
-                            class="text-brand-burgundy/20 font-serif text-6xl absolute top-4 right-6 leading-none select-none">
-                            "</div>
-                        <div class="flex gap-1 mb-4">
-                            <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-brand-gold" stroke-width="0"></i>
-                            <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-brand-gold" stroke-width="0"></i>
-                            <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-brand-gold" stroke-width="0"></i>
-                            <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-brand-gold" stroke-width="0"></i>
-                            <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-brand-gold" stroke-width="0"></i>
+                            class="text-brand-burgundy/20 font-serif text-6xl absolute top-4 right-6 leading-none select-none">"</div>
+                        <div class="flex gap-1 mb-4"> <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-brand-gold" stroke-width="0"></i> <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-brand-gold" stroke-width="0"></i> <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-brand-gold" stroke-width="0"></i> <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-brand-gold" stroke-width="0"></i> <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-brand-gold" stroke-width="0"></i>
                         </div>
-                        <p class="text-sm text-gray-600 leading-relaxed font-light mb-6 editable">
+                        <p data-editable="text" data-prop="text" class="text-sm text-gray-600 leading-relaxed font-light mb-6">
                             {{ item.text }}
                         </p>
-                        <div class="border-t border-gray-100 pt-4">
-                            <h4 class="font-serif text-lg tracking-tight editable">{{ item.name }}</h4>
-                            <p class="text-xs text-gray-400 editable">{{ item.service }}</p>
+                        <div class="border-t border-gray-100 pt-4"> <h4 data-editable="text" data-prop="name" class="font-serif text-lg tracking-tight">{{ item.name }}</h4>
+                            <p data-editable="text" data-prop="service" class="text-xs text-gray-400">{{ item.service }}</p>
                         </div>
                     </div>
                     {% endfor %}
@@ -428,54 +369,42 @@
 
         <!-- CTA Section -->
         <section id="kontakt"
-            class="max-w-7xl mx-auto px-6 py-24 md:py-32 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-            <div class="fade-in">
-                <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4 editable">{{ cta.tag }}</p>
-                <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl leading-tight tracking-tight mb-6 editable">
+            class="max-w-7xl mx-auto px-6 py-24 md:py-32 grid md:grid-cols-2 gap-12 md:gap-16 items-center"> <div class="fade-in">
+                <p data-editable="text" data-prop="cta.tag" class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4">{{ cta.tag }}</p> <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl leading-tight tracking-tight mb-6">
                     {{ cta.title | safe }}
-                    <span class="text-brand-burgundy italic editable">{{ cta.title_highlight }}</span>
+                    <span data-editable="text" data-prop="hero.highlight" class="text-brand-burgundy italic">{{ cta.title_highlight }}</span>
                 </h2>
-                <p class="text-base text-gray-600 mb-10 font-light leading-relaxed editable">
+                <p data-editable="text" data-prop="hero.description" class="text-base text-gray-600 mb-10 font-light leading-relaxed">
                     {{ cta.description }}
                 </p>
-                <div class="space-y-4 mb-10">
-                    <a href="{{ cta.instagram_link }}" target="_blank"
-                        class="flex items-center gap-4 text-sm text-gray-700 hover:text-brand-burgundy transition-colors group editable">
+                <div class="space-y-4 mb-10"> <a href="{{ cta.instagram_link }}" target="_blank"
+                        class="flex items-center gap-4 text-sm text-gray-700 hover:text-brand-burgundy transition-colors group">
                         <div
-                            class="w-12 h-12 bg-brand-cream rounded-full flex items-center justify-center group-hover:bg-brand-burgundy transition-colors">
-                            <i data-lucide="instagram"
-                                class="w-5 h-5 text-brand-burgundy group-hover:text-white transition-colors"
-                                stroke-width="1.5"></i>
+                            class="w-12 h-12 bg-brand-cream rounded-full flex items-center justify-center group-hover:bg-brand-burgundy transition-colors"> <i data-lucide="instagram"
+                                class="w-5 h-5 text-brand-burgundy group-hover:text-white transition-colors" stroke-width="1.5"></i>
                         </div>
                         <div>
-                            <div class="font-medium editable">{{ cta.instagram_label }}</div>
-                            <div class="text-xs text-gray-400 editable">{{ cta.instagram_value }}</div>
+                            <div data-editable="text" data-prop="cta.instagram_label" class="font-medium">{{ cta.instagram_label }}</div> <div data-editable="text" data-prop="cta.instagram_value" class="text-xs text-gray-400">{{ cta.instagram_value }}</div>
                         </div>
                     </a>
                     <a href="mailto:{{ cta.email_value }}"
-                        class="flex items-center gap-4 text-sm text-gray-700 hover:text-brand-burgundy transition-colors group editable">
+                        class="flex items-center gap-4 text-sm text-gray-700 hover:text-brand-burgundy transition-colors group">
                         <div
-                            class="w-12 h-12 bg-brand-cream rounded-full flex items-center justify-center group-hover:bg-brand-burgundy transition-colors">
-                            <i data-lucide="mail"
-                                class="w-5 h-5 text-brand-burgundy group-hover:text-white transition-colors"
-                                stroke-width="1.5"></i>
+                            class="w-12 h-12 bg-brand-cream rounded-full flex items-center justify-center group-hover:bg-brand-burgundy transition-colors"> <i data-lucide="mail"
+                                class="w-5 h-5 text-brand-burgundy group-hover:text-white transition-colors" stroke-width="1.5"></i>
                         </div>
                         <div>
-                            <div class="font-medium editable">{{ cta.email_label }}</div>
-                            <div class="text-xs text-gray-400 editable">{{ cta.email_value }}</div>
+                            <div data-editable="text" data-prop="cta.email_label" class="font-medium">{{ cta.email_label }}</div> <div data-editable="text" data-prop="cta.email_value" class="text-xs text-gray-400">{{ cta.email_value }}</div>
                         </div>
                     </a>
                     <a href="tel:{{ cta.phone_value }}"
-                        class="flex items-center gap-4 text-sm text-gray-700 hover:text-brand-burgundy transition-colors group editable">
+                        class="flex items-center gap-4 text-sm text-gray-700 hover:text-brand-burgundy transition-colors group">
                         <div
-                            class="w-12 h-12 bg-brand-cream rounded-full flex items-center justify-center group-hover:bg-brand-burgundy transition-colors">
-                            <i data-lucide="phone"
-                                class="w-5 h-5 text-brand-burgundy group-hover:text-white transition-colors"
-                                stroke-width="1.5"></i>
+                            class="w-12 h-12 bg-brand-cream rounded-full flex items-center justify-center group-hover:bg-brand-burgundy transition-colors"> <i data-lucide="phone"
+                                class="w-5 h-5 text-brand-burgundy group-hover:text-white transition-colors" stroke-width="1.5"></i>
                         </div>
                         <div>
-                            <div class="font-medium editable">{{ cta.phone_label }}</div>
-                            <div class="text-xs text-gray-400 editable">{{ cta.phone_value }}</div>
+                            <div data-editable="text" data-prop="cta.phone_label" class="font-medium">{{ cta.phone_label }}</div> <div data-editable="text" data-prop="cta.phone_value" class="text-xs text-gray-400">{{ cta.phone_value }}</div>
                         </div>
                     </a>
                 </div>
@@ -484,34 +413,26 @@
                 <div
                     class="absolute -left-4 md:-left-6 bottom-[-16px] md:bottom-[-24px] w-2/3 h-4 bg-brand-burgundy z-20 rounded-sm">
                 </div>
-                <img src="{{ cta.image }}" alt="Michaela stylistka"
-                    class="relative z-10 w-full object-cover object-top aspect-[3/4]" id="cta-image" loading="lazy"
-                    decoding="async">
+                <img data-editable="image" data-prop-src="cta.image" src="{{ cta.image }}" alt="Michaela stylistka"
+                    class="relative z-10 w-full object-cover object-top aspect-[3/4]" id="cta-image" loading="lazy" decoding="async">
             </div>
         </section>
 
         <!-- Instagram Section -->
-        <section id="instagram" class="bg-brand-cream py-24 md:py-32">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="text-center mb-12 fade-in">
-                    <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4 editable">{{ instagram.tag }}</p>
-                    <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight mb-4 editable">{{ instagram.title }}</h2>
-                    <p class="text-gray-600 editable">{{ instagram.description }}</p>
+        <section id="instagram" class="bg-brand-cream py-24 md:py-32"> <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-12 fade-in"> <p data-editable="text" data-prop="instagram.tag" class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4">{{ instagram.tag }}</p>
+                    <h2 data-editable="text" data-prop="instagram.title" class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight mb-4">{{ instagram.title }}</h2> <p data-editable="text" data-prop="instagram.description" class="text-gray-600">{{ instagram.description }}</p>
                 </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-12 fade-in">
+                <div data-editable="array" data-prop="instagram.items" class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-12 fade-in">
                     {% for item in instagram.items %}
-                    <a href="{{ item.link }}" target="_blank" class="aspect-[4/5] bg-brand-warm rounded-sm overflow-hidden group block editable">
-                        <img src="{{ item.image }}"
+                    <a data-editable="array-item" href="{{ item.link }}" target="_blank" class="aspect-[4/5] bg-brand-warm rounded-sm overflow-hidden group block"> <img data-editable="image" data-prop-src="image" src="{{ item.image }}"
                             alt="{{ item.alt }}"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                            loading="lazy" decoding="async">
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" decoding="async">
                     </a>
                     {% endfor %}
                 </div>
-                <div class="text-center fade-in">
-                    <a href="{{ instagram.btn_link }}" target="_blank"
-                        class="border border-brand-burgundy text-brand-burgundy px-8 py-3.5 text-sm font-medium hover:bg-brand-burgundy hover:text-white transition-all inline-flex items-center gap-3 rounded-sm editable">
-                        <i data-lucide="instagram" class="w-4 h-4" stroke-width="1.5"></i>
+                <div class="text-center fade-in"> <a href="{{ instagram.btn_link }}" target="_blank"
+                        class="border border-brand-burgundy text-brand-burgundy px-8 py-3.5 text-sm font-medium hover:bg-brand-burgundy hover:text-white transition-all inline-flex items-center gap-3 rounded-sm"> <i data-lucide="instagram" class="w-4 h-4" stroke-width="1.5"></i>
                         {{ instagram.btn_text }}
                     </a>
                 </div>
@@ -521,34 +442,23 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-brand-text text-white/60 py-16">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-10">
-                <div class="font-serif text-3xl text-white italic tracking-tight editable">{{ footer.name }}</div>
+    <footer class="bg-brand-text text-white/60 py-16"> <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-10"> <div data-editable="text" data-prop="footer.name" class="font-serif text-3xl text-white italic tracking-tight">{{ footer.name }}</div>
 
-                <nav class="flex flex-wrap justify-center gap-6 md:gap-8 text-xs font-light tracking-wide uppercase"
-                    aria-label="Patičková navigace">
-                    <a href="#o-mne" class="hover:text-white transition-colors editable">O mně</a>
-                    <a href="#sluzby" class="hover:text-white transition-colors editable">Služby</a>
-                    <a href="#recenze" class="hover:text-white transition-colors editable">Recenze</a>
-                    <a href="#jak-to-funguje" class="hover:text-white transition-colors editable">Jak to funguje</a>
-                    <a href="#instagram" class="hover:text-white transition-colors editable">Instagram</a>
+                <nav class="flex flex-wrap justify-center gap-6 md:gap-8 text-xs font-light tracking-wide uppercase" aria-label="Patičková navigace">
+                    <a href="#o-mne" class="hover:text-white transition-colors">O mně</a> <a href="#sluzby" class="hover:text-white transition-colors">Služby</a> <a href="#recenze" class="hover:text-white transition-colors">Recenze</a> <a href="#jak-to-funguje" class="hover:text-white transition-colors">Jak to funguje</a> <a href="#instagram" class="hover:text-white transition-colors">Instagram</a>
                 </nav>
 
-                <div class="flex flex-col items-center md:items-end gap-2 text-xs font-light">
-                    <a href="{{ footer.instagram_link }}" target="_blank"
-                        class="hover:text-white transition-colors flex items-center gap-2 editable">
-                        <i data-lucide="instagram" class="w-4 h-4" stroke-width="1.5"></i>
+                <div class="flex flex-col items-center md:items-end gap-2 text-xs font-light"> <a href="{{ footer.instagram_link }}" target="_blank"
+                        class="hover:text-white transition-colors flex items-center gap-2"> <i data-lucide="instagram" class="w-4 h-4" stroke-width="1.5"></i>
                         {{ footer.instagram_label }}
                     </a>
-                    <a href="mailto:{{ footer.email }}"
-                        class="hover:text-white transition-colors editable">{{ footer.email }}</a>
-                    <a href="tel:{{ footer.phone | replace(' ', '') }}" class="hover:text-white transition-colors editable">{{ footer.phone }}</a>
+                    <a data-editable="text" data-prop="footer.email" href="mailto:{{ footer.email }}"
+                        class="hover:text-white transition-colors">{{ footer.email }}</a> <a data-editable="text" data-prop="footer.phone" href="tel:{{ footer.phone | replace(' ', '') }}" class="hover:text-white transition-colors">{{ footer.phone }}</a>
                 </div>
             </div>
-            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-xs editable">{{ footer.copyright }}</p>
-                <p class="text-xs text-white/30 editable">{{ footer.slogan }}</p>
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"> <p data-editable="text" data-prop="footer.copyright" class="text-xs">{{ footer.copyright }}</p>
+                <p data-editable="text" data-prop="footer.slogan" class="text-xs text-white/30">{{ footer.slogan }}</p>
             </div>
         </div>
     </footer>
