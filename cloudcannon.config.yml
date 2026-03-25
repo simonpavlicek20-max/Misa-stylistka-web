@@ -1,0 +1,19 @@
+paths:
+  static: ''
+  uploads: assets/uploads
+timezone: Europe/Prague
+markdown:
+  engine: commonmark
+  options:
+    html: true
+collections_config:
+  pages:
+    path: ''
+    icon: wysiwyg
+  data:
+    path: _data
+    icon: data_usage
+    disable_url: true
+    disable_add: true
+    disable_add_folder: true
+    disable_file_actions: true
