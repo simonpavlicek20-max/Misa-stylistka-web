@@ -166,7 +166,6 @@
         }
     }
     </script>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
 <body class="text-brand-text antialiased selection:bg-brand-burgundy selection:text-white bg-white">
@@ -174,17 +173,17 @@
     <!-- Navigation -->
     <header
         class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center bg-white/95 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-100">
-        <a href="#" class="font-serif text-2xl md:text-3xl text-brand-burgundy italic tracking-tight">Michaela</a>
+        <a href="#" class="font-serif text-2xl md:text-3xl text-brand-burgundy italic tracking-tight editable">Michaela</a>
         <nav class="hidden md:flex gap-8 text-sm font-normal" aria-label="Hlavní navigace">
-            <a href="#o-mne" class="hover:text-brand-burgundy transition-colors">O mně</a>
-            <a href="#sluzby" class="hover:text-brand-burgundy transition-colors">Služby</a>
-            <a href="#jak-to-funguje" class="hover:text-brand-burgundy transition-colors">Jak to funguje</a>
-            <a href="#recenze" class="hover:text-brand-burgundy transition-colors">Recenze</a>
-            <a href="#kontakt" class="hover:text-brand-burgundy transition-colors">Kontakt</a>
-            <a href="ebook.html" class="hover:text-brand-burgundy transition-colors">E-book</a>
+            <a href="#o-mne" class="hover:text-brand-burgundy transition-colors editable">O mně</a>
+            <a href="#sluzby" class="hover:text-brand-burgundy transition-colors editable">Služby</a>
+            <a href="#jak-to-funguje" class="hover:text-brand-burgundy transition-colors editable">Jak to funguje</a>
+            <a href="#recenze" class="hover:text-brand-burgundy transition-colors editable">Recenze</a>
+            <a href="#kontakt" class="hover:text-brand-burgundy transition-colors editable">Kontakt</a>
+            <a href="ebook.html" class="hover:text-brand-burgundy transition-colors editable">E-book</a>
         </nav>
         <a href="#kontakt"
-            class="hidden md:inline-block border border-brand-burgundy text-brand-burgundy px-6 py-2.5 text-sm font-normal hover:bg-brand-burgundy hover:text-white transition-all rounded-sm">
+            class="hidden md:inline-block border border-brand-burgundy text-brand-burgundy px-6 py-2.5 text-sm font-normal hover:bg-brand-burgundy hover:text-white transition-all rounded-sm editable">
             Napište mi
         </a>
         <!-- Mobile menu button -->
@@ -195,14 +194,14 @@
     <!-- Mobile menu -->
     <div id="mobile-menu" class="mobile-menu md:hidden bg-white border-b border-gray-100 px-6">
         <nav class="flex flex-col gap-4 py-6 text-sm" aria-label="Mobilní navigace">
-            <a href="#o-mne" class="hover:text-brand-burgundy transition-colors">O mně</a>
-            <a href="#sluzby" class="hover:text-brand-burgundy transition-colors">Služby</a>
-            <a href="#jak-to-funguje" class="hover:text-brand-burgundy transition-colors">Jak to funguje</a>
-            <a href="#recenze" class="hover:text-brand-burgundy transition-colors">Recenze</a>
-            <a href="#kontakt" class="hover:text-brand-burgundy transition-colors">Kontakt</a>
-            <a href="ebook.html" class="hover:text-brand-burgundy transition-colors">E-book</a>
+            <a href="#o-mne" class="hover:text-brand-burgundy transition-colors editable">O mně</a>
+            <a href="#sluzby" class="hover:text-brand-burgundy transition-colors editable">Služby</a>
+            <a href="#jak-to-funguje" class="hover:text-brand-burgundy transition-colors editable">Jak to funguje</a>
+            <a href="#recenze" class="hover:text-brand-burgundy transition-colors editable">Recenze</a>
+            <a href="#kontakt" class="hover:text-brand-burgundy transition-colors editable">Kontakt</a>
+            <a href="ebook.html" class="hover:text-brand-burgundy transition-colors editable">E-book</a>
             <a href="#kontakt"
-                class="inline-block text-center border border-brand-burgundy text-brand-burgundy px-6 py-2.5 text-sm font-normal hover:bg-brand-burgundy hover:text-white transition-all rounded-sm mt-2">
+                class="inline-block text-center border border-brand-burgundy text-brand-burgundy px-6 py-2.5 text-sm font-normal hover:bg-brand-burgundy hover:text-white transition-all rounded-sm mt-2 editable">
                 Napište mi
             </a>
         </nav>
@@ -211,25 +210,25 @@
     <main>
         <section class="max-w-7xl mx-auto px-6 pt-12 pb-24 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
             <div class="max-w-xl fade-in">
-                <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-6">{{ hero.tag }}</p>
-                <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl leading-[1.08] tracking-tight mb-8">
+                <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-6 editable">{{ hero.tag }}</p>
+                <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl leading-[1.08] tracking-tight mb-8 editable">
                     {{ hero.title | safe }}
-                    <span class="text-brand-burgundy italic">{{ hero.highlight }}</span>
+                    <span class="text-brand-burgundy italic editable">{{ hero.highlight }}</span>
                 </h1>
-                <p class="text-base md:text-lg text-gray-600 mb-10 leading-relaxed max-w-md">
+                <p class="text-base md:text-lg text-gray-600 mb-10 leading-relaxed max-w-md editable">
                     {{ hero.description }}
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="#kontakt"
-                        class="btn-primary bg-brand-burgundy text-white px-8 py-4 text-sm font-medium hover:bg-brand-dark transition-colors rounded-sm text-center">
+                        class="btn-primary bg-brand-burgundy text-white px-8 py-4 text-sm font-medium hover:bg-brand-dark transition-colors rounded-sm text-center editable">
                         {{ hero.btn1_text }}
                     </a>
                     <a href="#sluzby"
-                        class="border border-gray-300 px-8 py-4 text-sm font-normal hover:border-brand-burgundy hover:text-brand-burgundy transition-all rounded-sm text-center">
+                        class="border border-gray-300 px-8 py-4 text-sm font-normal hover:border-brand-burgundy hover:text-brand-burgundy transition-all rounded-sm text-center editable">
                         {{ hero.btn2_text }}
                     </a>
                 </div>
-                <p class="text-xs text-gray-400 mt-6">{{ hero.subtext }}</p>
+                <p class="text-xs text-gray-400 mt-6 editable">{{ hero.subtext }}</p>
             </div>
             <div class="relative w-full max-w-md ml-auto mt-10 md:mt-0 fade-in">
                 <div
@@ -240,8 +239,8 @@
                     fetchpriority="high" decoding="async">
                 <div class="absolute -bottom-10 right-0 flex gap-6 text-sm font-normal text-gray-500 z-20">
                     <a href="https://www.instagram.com/stylovav50/" target="_blank"
-                        class="hover:text-brand-burgundy transition-colors">Instagram</a>
-                    <a href="#kontakt" class="hover:text-brand-burgundy transition-colors">E-mail</a>
+                        class="hover:text-brand-burgundy transition-colors editable">Instagram</a>
+                    <a href="#kontakt" class="hover:text-brand-burgundy transition-colors editable">E-mail</a>
                 </div>
             </div>
         </section>
@@ -250,26 +249,26 @@
         <div
             class="w-full bg-brand-burgundy text-white/90 py-4 overflow-hidden flex whitespace-nowrap text-sm tracking-wide font-light">
             <div class="animate-marquee flex gap-8 px-4">
-                <span>Styl nemá velikost</span>
-                <span class="text-white/40">✦</span>
-                <span>Každá žena si zaslouží cítit se krásně</span>
-                <span class="text-white/40">✦</span>
-                <span>Bez diet, bez výmluv – jen váš styl</span>
-                <span class="text-white/40">✦</span>
-                <span>Věk a velikost jsou jen čísla</span>
-                <span class="text-white/40">✦</span>
-                <span>Sleva není argument – styl ano</span>
-                <span class="text-white/40">✦</span>
-                <span>Styl nemá velikost</span>
-                <span class="text-white/40">✦</span>
-                <span>Každá žena si zaslouží cítit se krásně</span>
-                <span class="text-white/40">✦</span>
-                <span>Bez diet, bez výmluv – jen váš styl</span>
-                <span class="text-white/40">✦</span>
-                <span>Věk a velikost jsou jen čísla</span>
-                <span class="text-white/40">✦</span>
-                <span>Sleva není argument – styl ano</span>
-                <span class="text-white/40">✦</span>
+                <span class="editable">Styl nemá velikost</span>
+                <span class="text-white/40 editable">✦</span>
+                <span class="editable">Každá žena si zaslouží cítit se krásně</span>
+                <span class="text-white/40 editable">✦</span>
+                <span class="editable">Bez diet, bez výmluv – jen váš styl</span>
+                <span class="text-white/40 editable">✦</span>
+                <span class="editable">Věk a velikost jsou jen čísla</span>
+                <span class="text-white/40 editable">✦</span>
+                <span class="editable">Sleva není argument – styl ano</span>
+                <span class="text-white/40 editable">✦</span>
+                <span class="editable">Styl nemá velikost</span>
+                <span class="text-white/40 editable">✦</span>
+                <span class="editable">Každá žena si zaslouží cítit se krásně</span>
+                <span class="text-white/40 editable">✦</span>
+                <span class="editable">Bez diet, bez výmluv – jen váš styl</span>
+                <span class="text-white/40 editable">✦</span>
+                <span class="editable">Věk a velikost jsou jen čísla</span>
+                <span class="text-white/40 editable">✦</span>
+                <span class="editable">Sleva není argument – styl ano</span>
+                <span class="text-white/40 editable">✦</span>
             </div>
         </div>
 
@@ -285,29 +284,29 @@
                         loading="lazy" decoding="async">
                 </div>
                 <div class="max-w-lg fade-in">
-                    <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4">{{ about.tag }}</p>
-                    <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl leading-tight tracking-tight mb-8">
+                    <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4 editable">{{ about.tag }}</p>
+                    <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl leading-tight tracking-tight mb-8 editable">
                         {{ about.title | safe }}
-                        <span class="text-brand-burgundy italic">{{ about.title_highlight }}</span>
+                        <span class="text-brand-burgundy italic editable">{{ about.title_highlight }}</span>
                     </h2>
                     <div class="text-base text-gray-600 mb-10 leading-relaxed space-y-4">
                         {{ about.body | safe }}
                     </div>
                     <div class="grid grid-cols-3 gap-6 md:gap-8 text-center border-t border-gray-200 pt-8">
                         <div>
-                            <div class="font-serif text-2xl md:text-3xl mb-1 tracking-tight text-brand-burgundy">{{ about.stat1_val }}
+                            <div class="font-serif text-2xl md:text-3xl mb-1 tracking-tight text-brand-burgundy editable">{{ about.stat1_val }}
                             </div>
-                            <div class="text-xs text-gray-500 font-light">{{ about.stat1_label }}</div>
+                            <div class="text-xs text-gray-500 font-light editable">{{ about.stat1_label }}</div>
                         </div>
                         <div>
-                            <div class="font-serif text-2xl md:text-3xl mb-1 tracking-tight text-brand-burgundy">{{ about.stat2_val }}
+                            <div class="font-serif text-2xl md:text-3xl mb-1 tracking-tight text-brand-burgundy editable">{{ about.stat2_val }}
                             </div>
-                            <div class="text-xs text-gray-500 font-light">{{ about.stat2_label }}</div>
+                            <div class="text-xs text-gray-500 font-light editable">{{ about.stat2_label }}</div>
                         </div>
                         <div>
-                            <div class="font-serif text-2xl md:text-3xl mb-1 tracking-tight text-brand-burgundy">{{ about.stat3_val }}
+                            <div class="font-serif text-2xl md:text-3xl mb-1 tracking-tight text-brand-burgundy editable">{{ about.stat3_val }}
                             </div>
-                            <div class="text-xs text-gray-500 font-light">{{ about.stat3_label }}</div>
+                            <div class="text-xs text-gray-500 font-light editable">{{ about.stat3_label }}</div>
                         </div>
                     </div>
                 </div>
@@ -317,9 +316,9 @@
         <!-- Services Section -->
         <section id="sluzby" class="max-w-7xl mx-auto px-6 py-24 md:py-32">
             <div class="text-center mb-16 fade-in">
-                <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4">{{ services.tag }}</p>
-                <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight mb-4">{{ services.title }}</h2>
-                <p class="text-gray-600 max-w-xl mx-auto">{{ services.description }}</p>
+                <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4 editable">{{ services.tag }}</p>
+                <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight mb-4 editable">{{ services.title }}</h2>
+                <p class="text-gray-600 max-w-xl mx-auto editable">{{ services.description }}</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8 fade-in">
@@ -331,8 +330,8 @@
                             class="w-6 h-6 text-brand-burgundy group-hover:text-white transition-colors"
                             stroke-width="1.5"></i>
                     </div>
-                    <h3 class="font-serif text-xl mb-3 tracking-tight">{{ item.title }}</h3>
-                    <p class="text-sm text-gray-600 leading-relaxed font-light">
+                    <h3 class="font-serif text-xl mb-3 tracking-tight editable">{{ item.title }}</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed font-light editable">
                         {{ item.desc }}
                     </p>
                 </div>
@@ -341,7 +340,7 @@
 
             <div class="text-center mt-12 fade-in">
                 <a href="#kontakt"
-                    class="btn-primary inline-block bg-brand-burgundy text-white px-8 py-4 text-sm font-medium hover:bg-brand-dark transition-colors rounded-sm">
+                    class="btn-primary inline-block bg-brand-burgundy text-white px-8 py-4 text-sm font-medium hover:bg-brand-dark transition-colors rounded-sm editable">
                     {{ services.btn_text }}
                 </a>
             </div>
@@ -351,8 +350,8 @@
         <section class="bg-brand-cream py-24 md:py-32">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="text-center mb-16 fade-in">
-                    <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4">{{ reasons.tag }}</p>
-                    <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight">{{ reasons.title }}</h2>
+                    <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4 editable">{{ reasons.tag }}</p>
+                    <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight editable">{{ reasons.title }}</h2>
                 </div>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 fade-in">
@@ -362,8 +361,8 @@
                             class="w-16 h-16 bg-brand-burgundy rounded-full flex items-center justify-center mx-auto mb-5">
                             <i data-lucide="{{ item.icon }}" class="w-7 h-7 text-white" stroke-width="1.5"></i>
                         </div>
-                        <h3 class="font-serif text-lg mb-2">{{ item.title }}</h3>
-                        <p class="text-sm text-gray-600 font-light leading-relaxed">{{ item.desc }}</p>
+                        <h3 class="font-serif text-lg mb-2 editable">{{ item.title }}</h3>
+                        <p class="text-sm text-gray-600 font-light leading-relaxed editable">{{ item.desc }}</p>
                     </div>
                     {% endfor %}
                 </div>
@@ -373,20 +372,20 @@
         <!-- How It Works Section -->
         <section id="jak-to-funguje" class="max-w-7xl mx-auto px-6 py-24 md:py-32">
             <div class="text-center mb-16 md:mb-20 fade-in">
-                <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4">{{ process.tag }}</p>
-                <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight">{{ process.title }}</h2>
+                <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4 editable">{{ process.tag }}</p>
+                <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight editable">{{ process.title }}</h2>
             </div>
             <div class="grid md:grid-cols-3 gap-12 md:gap-16 fade-in">
                 {% for item in process.items %}
                 <div class="flex items-start gap-6 relative">
                     <span
-                        class="step-number font-serif text-7xl md:text-8xl text-brand-cream leading-none absolute -left-2 -top-6 -z-10 select-none">{{ item.number }}</span>
+                        class="step-number font-serif text-7xl md:text-8xl text-brand-cream leading-none absolute -left-2 -top-6 -z-10 select-none editable">{{ item.number }}</span>
                     <div class="pt-6 z-10">
                         <div class="w-10 h-10 bg-brand-burgundy rounded-full flex items-center justify-center mb-4">
                             <i data-lucide="{{ item.icon }}" class="w-5 h-5 text-white" stroke-width="1.5"></i>
                         </div>
-                        <h3 class="text-lg font-medium mb-3">{{ item.title }}</h3>
-                        <p class="text-sm text-gray-600 font-light leading-relaxed">{{ item.desc }}</p>
+                        <h3 class="text-lg font-medium mb-3 editable">{{ item.title }}</h3>
+                        <p class="text-sm text-gray-600 font-light leading-relaxed editable">{{ item.desc }}</p>
                     </div>
                 </div>
                 {% endfor %}
@@ -397,8 +396,8 @@
         <section id="recenze" class="bg-brand-cream py-24 md:py-32">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="text-center mb-16 fade-in">
-                    <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4">{{ testimonials.tag }}</p>
-                    <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight">{{ testimonials.title }}</h2>
+                    <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4 editable">{{ testimonials.tag }}</p>
+                    <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight editable">{{ testimonials.title }}</h2>
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-8 md:gap-12 fade-in">
@@ -414,12 +413,12 @@
                             <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-brand-gold" stroke-width="0"></i>
                             <i data-lucide="star" class="w-4 h-4 text-brand-gold fill-brand-gold" stroke-width="0"></i>
                         </div>
-                        <p class="text-sm text-gray-600 leading-relaxed font-light mb-6">
+                        <p class="text-sm text-gray-600 leading-relaxed font-light mb-6 editable">
                             {{ item.text }}
                         </p>
                         <div class="border-t border-gray-100 pt-4">
-                            <h4 class="font-serif text-lg tracking-tight">{{ item.name }}</h4>
-                            <p class="text-xs text-gray-400">{{ item.service }}</p>
+                            <h4 class="font-serif text-lg tracking-tight editable">{{ item.name }}</h4>
+                            <p class="text-xs text-gray-400 editable">{{ item.service }}</p>
                         </div>
                     </div>
                     {% endfor %}
@@ -431,17 +430,17 @@
         <section id="kontakt"
             class="max-w-7xl mx-auto px-6 py-24 md:py-32 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
             <div class="fade-in">
-                <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4">{{ cta.tag }}</p>
-                <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl leading-tight tracking-tight mb-6">
+                <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4 editable">{{ cta.tag }}</p>
+                <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl leading-tight tracking-tight mb-6 editable">
                     {{ cta.title | safe }}
-                    <span class="text-brand-burgundy italic">{{ cta.title_highlight }}</span>
+                    <span class="text-brand-burgundy italic editable">{{ cta.title_highlight }}</span>
                 </h2>
-                <p class="text-base text-gray-600 mb-10 font-light leading-relaxed">
+                <p class="text-base text-gray-600 mb-10 font-light leading-relaxed editable">
                     {{ cta.description }}
                 </p>
                 <div class="space-y-4 mb-10">
                     <a href="{{ cta.instagram_link }}" target="_blank"
-                        class="flex items-center gap-4 text-sm text-gray-700 hover:text-brand-burgundy transition-colors group">
+                        class="flex items-center gap-4 text-sm text-gray-700 hover:text-brand-burgundy transition-colors group editable">
                         <div
                             class="w-12 h-12 bg-brand-cream rounded-full flex items-center justify-center group-hover:bg-brand-burgundy transition-colors">
                             <i data-lucide="instagram"
@@ -449,12 +448,12 @@
                                 stroke-width="1.5"></i>
                         </div>
                         <div>
-                            <div class="font-medium">{{ cta.instagram_label }}</div>
-                            <div class="text-xs text-gray-400">{{ cta.instagram_value }}</div>
+                            <div class="font-medium editable">{{ cta.instagram_label }}</div>
+                            <div class="text-xs text-gray-400 editable">{{ cta.instagram_value }}</div>
                         </div>
                     </a>
                     <a href="mailto:{{ cta.email_value }}"
-                        class="flex items-center gap-4 text-sm text-gray-700 hover:text-brand-burgundy transition-colors group">
+                        class="flex items-center gap-4 text-sm text-gray-700 hover:text-brand-burgundy transition-colors group editable">
                         <div
                             class="w-12 h-12 bg-brand-cream rounded-full flex items-center justify-center group-hover:bg-brand-burgundy transition-colors">
                             <i data-lucide="mail"
@@ -462,12 +461,12 @@
                                 stroke-width="1.5"></i>
                         </div>
                         <div>
-                            <div class="font-medium">{{ cta.email_label }}</div>
-                            <div class="text-xs text-gray-400">{{ cta.email_value }}</div>
+                            <div class="font-medium editable">{{ cta.email_label }}</div>
+                            <div class="text-xs text-gray-400 editable">{{ cta.email_value }}</div>
                         </div>
                     </a>
                     <a href="tel:{{ cta.phone_value }}"
-                        class="flex items-center gap-4 text-sm text-gray-700 hover:text-brand-burgundy transition-colors group">
+                        class="flex items-center gap-4 text-sm text-gray-700 hover:text-brand-burgundy transition-colors group editable">
                         <div
                             class="w-12 h-12 bg-brand-cream rounded-full flex items-center justify-center group-hover:bg-brand-burgundy transition-colors">
                             <i data-lucide="phone"
@@ -475,8 +474,8 @@
                                 stroke-width="1.5"></i>
                         </div>
                         <div>
-                            <div class="font-medium">{{ cta.phone_label }}</div>
-                            <div class="text-xs text-gray-400">{{ cta.phone_value }}</div>
+                            <div class="font-medium editable">{{ cta.phone_label }}</div>
+                            <div class="text-xs text-gray-400 editable">{{ cta.phone_value }}</div>
                         </div>
                     </a>
                 </div>
@@ -495,13 +494,13 @@
         <section id="instagram" class="bg-brand-cream py-24 md:py-32">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="text-center mb-12 fade-in">
-                    <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4">{{ instagram.tag }}</p>
-                    <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight mb-4">{{ instagram.title }}</h2>
-                    <p class="text-gray-600">{{ instagram.description }}</p>
+                    <p class="text-brand-burgundy text-sm tracking-widest uppercase font-medium mb-4 editable">{{ instagram.tag }}</p>
+                    <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight mb-4 editable">{{ instagram.title }}</h2>
+                    <p class="text-gray-600 editable">{{ instagram.description }}</p>
                 </div>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-12 fade-in">
                     {% for item in instagram.items %}
-                    <a href="{{ item.link }}" target="_blank" class="aspect-[4/5] bg-brand-warm rounded-sm overflow-hidden group block">
+                    <a href="{{ item.link }}" target="_blank" class="aspect-[4/5] bg-brand-warm rounded-sm overflow-hidden group block editable">
                         <img src="{{ item.image }}"
                             alt="{{ item.alt }}"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -511,7 +510,7 @@
                 </div>
                 <div class="text-center fade-in">
                     <a href="{{ instagram.btn_link }}" target="_blank"
-                        class="border border-brand-burgundy text-brand-burgundy px-8 py-3.5 text-sm font-medium hover:bg-brand-burgundy hover:text-white transition-all inline-flex items-center gap-3 rounded-sm">
+                        class="border border-brand-burgundy text-brand-burgundy px-8 py-3.5 text-sm font-medium hover:bg-brand-burgundy hover:text-white transition-all inline-flex items-center gap-3 rounded-sm editable">
                         <i data-lucide="instagram" class="w-4 h-4" stroke-width="1.5"></i>
                         {{ instagram.btn_text }}
                     </a>
@@ -525,31 +524,31 @@
     <footer class="bg-brand-text text-white/60 py-16">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-10">
-                <div class="font-serif text-3xl text-white italic tracking-tight">{{ footer.name }}</div>
+                <div class="font-serif text-3xl text-white italic tracking-tight editable">{{ footer.name }}</div>
 
                 <nav class="flex flex-wrap justify-center gap-6 md:gap-8 text-xs font-light tracking-wide uppercase"
                     aria-label="Patičková navigace">
-                    <a href="#o-mne" class="hover:text-white transition-colors">O mně</a>
-                    <a href="#sluzby" class="hover:text-white transition-colors">Služby</a>
-                    <a href="#recenze" class="hover:text-white transition-colors">Recenze</a>
-                    <a href="#jak-to-funguje" class="hover:text-white transition-colors">Jak to funguje</a>
-                    <a href="#instagram" class="hover:text-white transition-colors">Instagram</a>
+                    <a href="#o-mne" class="hover:text-white transition-colors editable">O mně</a>
+                    <a href="#sluzby" class="hover:text-white transition-colors editable">Služby</a>
+                    <a href="#recenze" class="hover:text-white transition-colors editable">Recenze</a>
+                    <a href="#jak-to-funguje" class="hover:text-white transition-colors editable">Jak to funguje</a>
+                    <a href="#instagram" class="hover:text-white transition-colors editable">Instagram</a>
                 </nav>
 
                 <div class="flex flex-col items-center md:items-end gap-2 text-xs font-light">
                     <a href="{{ footer.instagram_link }}" target="_blank"
-                        class="hover:text-white transition-colors flex items-center gap-2">
+                        class="hover:text-white transition-colors flex items-center gap-2 editable">
                         <i data-lucide="instagram" class="w-4 h-4" stroke-width="1.5"></i>
                         {{ footer.instagram_label }}
                     </a>
                     <a href="mailto:{{ footer.email }}"
-                        class="hover:text-white transition-colors">{{ footer.email }}</a>
-                    <a href="tel:{{ footer.phone | replace(' ', '') }}" class="hover:text-white transition-colors">{{ footer.phone }}</a>
+                        class="hover:text-white transition-colors editable">{{ footer.email }}</a>
+                    <a href="tel:{{ footer.phone | replace(' ', '') }}" class="hover:text-white transition-colors editable">{{ footer.phone }}</a>
                 </div>
             </div>
             <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-xs">{{ footer.copyright }}</p>
-                <p class="text-xs text-white/30">{{ footer.slogan }}</p>
+                <p class="text-xs editable">{{ footer.copyright }}</p>
+                <p class="text-xs text-white/30 editable">{{ footer.slogan }}</p>
             </div>
         </div>
     </footer>
