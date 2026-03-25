@@ -1,0 +1,24 @@
+{
+  "tag": "Proces spolupráce",
+  "title": "3 kroky ke stylovému šatníku",
+  "items": [
+    {
+      "number": "01",
+      "icon": "message-circle",
+      "title": "Napíšete mi",
+      "desc": "Řeknete mi o sobě, svém stylu, postavě a tom, co řešíte. Nezávazně a bez obav."
+    },
+    {
+      "number": "02",
+      "icon": "users",
+      "title": "Společně vybereme",
+      "desc": "Navrhneme barvy, střihy a outfity přesně pro vás. Spolu určitě najdeme ten správný styl."
+    },
+    {
+      "number": "03",
+      "icon": "star",
+      "title": "Zazáříte",
+      "desc": "Každé ráno před skříní budete vědět, co na sebe. Bez stresu, s úsměvem."
+    }
+  ]
+}

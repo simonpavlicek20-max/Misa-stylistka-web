@@ -1,0 +1,23 @@
+{
+  "tag": "Služby",
+  "title": "Služby osobní stylistky",
+  "description": "Každá žena je jiná — proto je každý styling šitý na míru právě vám.",
+  "btn_text": "Nevíte, kde začít? Napište mi",
+  "items": [
+    {
+      "icon": "shopping-bag",
+      "title": "Osobní nákupy",
+      "desc": "Ty napíšeš. Já vyberu. Já přivezu. Přesně to, co vám sluší — z obchodů, které milujete."
+    },
+    {
+      "icon": "sparkles",
+      "title": "Styling na míru",
+      "desc": "Pomůžu vám složit outfity z toho, co už máte — a doplnit to, co chybí. Minimum kusů, maximum stylu."
+    },
+    {
+      "icon": "shirt",
+      "title": "Třídění šatníku",
+      "desc": "Minimální šatník, maximální styl. Zbavíme vás chaosu a vytvoříme systém, který funguje."
+    }
+  ]
+}
